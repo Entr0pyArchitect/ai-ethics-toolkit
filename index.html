@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Critical Thinking & AI Ethics | St. Ambrose University</title>
+    <style>
+        /* --- ST. AMBROSE UNIVERSITY COLOR PALETTE --- */
+        :root {
+            --sau-blue: #003087;   /* Official SAU Navy Blue */
+            --sau-gold: #FFB81C;   /* Accent Gold */
+            --sau-dark: #001f5a;   /* Darker blue for hover states */
+            --text-dark: #333333;  /* Main text color */
+            --bg-light: #f4f6f8;   /* Light gray for content background */
+            --white: #ffffff;
+        }
+
+        /* --- GLOBAL STYLES --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            display: flex;
+            line-height: 1.6;
+        }
+
+        html {
+            /* Enables smooth scrolling when clicking sidebar links */
+            scroll-behavior: smooth; 
+        }
+
+        /* --- SIDEBAR NAVIGATION --- */
+        .sidebar {
+            width: 280px;
+            height: 100vh;
+            background-color: var(--sau-blue);
+            color: var(--white);
+            position: fixed;
+            top: 0;
+            left: 0;
+            overflow-y: auto;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        .sidebar-header {
+            padding: 30px 20px;
+            text-align: center;
+            border-bottom: 3px solid var(--sau-gold);
+            background-color: var(--sau-dark);
+        }
+
+        .sidebar-header h1 {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            color: var(--sau-gold);
+        }
+
+        .sidebar-header p {
+            font-size: 0.9rem;
+            color: #d1e0f3;
+        }
+
+        /* --- INTERACTIVE DROPDOWNS --- */
+        .nav-item {
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .dropdown-btn {
+            width: 100%;
+            background-color: transparent;
+            color: var(--white);
+            padding: 18px 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            border: none;
+            text-align: left;
+            cursor: pointer;
+            outline: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .dropdown-btn:hover, .dropdown-btn.active {
+            background-color: var(--sau-dark);
+            color: var(--sau-gold);
+        }
+
+        /* Arrow transition */
+        .arrow {
+            transition: transform 0.3s ease;
+            font-size: 0.8rem;
+        }
+        .dropdown-btn.active .arrow {
+            transform: rotate(180deg);
+        }
+
+        .dropdown-container {
+            /* Max-height is animated via JavaScript */
+            max-height: 0; 
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            background-color: rgba(0, 0, 0, 0.15);
+        }
+
+        .dropdown-container a {
+            display: block;
+            color: #d1e0f3;
+            padding: 12px 20px 12px 40px;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s ease, padding-left 0.3s ease;
+        }
+
+        .dropdown-container a:hover {
+            color: var(--sau-gold);
+            padding-left: 45px; /* Slight indent on hover */
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        /* --- MAIN CONTENT AREA --- */
+        .main-content {
+            margin-left: 280px; /* Same as sidebar width */
+            padding: 40px 60px;
+            width: calc(100% - 280px);
+        }
+
+        .content-section {
+            /* Gives enough space so each section acts like its own page */
+            min-height: 80vh; 
+            padding-top: 50px; 
+            margin-bottom: 50px;
+            border-bottom: 2px dashed #ccc;
+        }
+
+        .content-section:last-child {
+            border-bottom: none;
+        }
+
+        h2 {
+            color: var(--sau-blue);
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            border-bottom: 4px solid var(--sau-gold);
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        h3 {
+            color: var(--sau-dark);
+            font-size: 1.5rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .infobox {
+            background-color: white;
+            border-left: 5px solid var(--sau-gold);
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-radius: 4px;
+        }
+
+        /* --- RESPONSIVE DESIGN --- */
+        @media (max-width: 768px) {
+            body { flex-direction: column; }
+            .sidebar { width: 100%; height: auto; position: relative; }
+            .main-content { margin-left: 0; width: 100%; padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <h1>St. Ambrose University</h1>
+            <p>Critical Thinking & AI Ethics</p>
+        </div>
+
+        <div class="nav-item">
+            <button class="dropdown-btn">1. Intro to AI Ethics <span class="arrow">&#9660;</span></button>
+            <div class="dropdown-container">
+                <a href="#what-is-ai">What is AI?</a>
+                <a href="#moral-imperative">The Moral Imperative</a>
+            </div>
+        </div>
+
+        <div class="nav-item">
+            <button class="dropdown-btn">2. Bias & Fairness <span class="arrow">&#9660;</span></button>
+            <div class="dropdown-container">
+                <a href="#algorithmic-bias">Algorithmic Bias</a>
+                <a href="#mitigation">Mitigation Strategies</a>
+            </div>
+        </div>
+
+        <div class="nav-item">
+            <button class="dropdown-btn">3. Privacy & Data <span class="arrow">&#9660;</span></button>
+            <div class="dropdown-container">
+                <a href="#surveillance">Surveillance Capitalism</a>
+                <a href="#consent">Informed Consent</a>
+            </div>
+        </div>
+
+        <div class="nav-item">
+            <button class="dropdown-btn">4. Future Implications <span class="arrow">&#9660;</span></button>
+            <div class="dropdown-container">
+                <a href="#job-displacement">Job Displacement</a>
+                <a href="#human-agency">Human Agency</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        
+        <section id="what-is-ai" class="content-section">
+            <h2>1. Introduction to AI Ethics</h2>
+            <h3>What is AI?</h3>
+            <p>Artificial Intelligence (AI) refers to the simulation of human intelligence in machines that are programmed to think and learn. In the context of critical thinking, we must look past the hype and evaluate AI as a tool created by humans, which naturally inherits human flaws.</p>
+            
+            <div class="infobox" id="moral-imperative">
+                <h3>The Moral Imperative</h3>
+                <p>As St. Ambrose University champions social justice and ethical leadership, understanding the moral implications of AI is crucial. We must ask: <strong>Who benefits from these systems, and who is harmed?</strong> Critical thinking requires us to question the datasets and the corporate motives behind AI development.</p>
+            </div>
+        </section>
+
+        <section id="algorithmic-bias" class="content-section">
+            <h2>2. Bias & Fairness</h2>
+            <h3>Algorithmic Bias</h3>
+            <p>Algorithms are not objective. They are trained on historical data. If society has historical prejudices (racism, sexism, classism), the AI will inevitably learn, automate, and amplify those prejudices. This poses a massive ethical dilemma in fields like criminal justice, hiring, and lending.</p>
+
+            <h3 id="mitigation">Mitigation Strategies</h3>
+            <p>To combat this, developers and ethicists must practice active critical thinking. This includes conducting bias audits, ensuring diverse development teams, and implementing transparent "white-box" algorithms rather than opaque "black-box" systems where the decision-making process is hidden.</p>
+        </section>
+
+        <section id="surveillance" class="content-section">
+            <h2>3. Privacy & Data</h2>
+            <h3>Surveillance Capitalism</h3>
+            <p>AI relies heavily on vast amounts of data—often *our* personal data. AI ethics heavily scrutinizes the concept of surveillance capitalism, where human experience is commodified as free raw material for hidden commercial practices of extraction, prediction, and sales.</p>
+
+            <h3 id="consent">Informed Consent</h3>
+            <p>True informed consent is rare in the digital age. Users mindlessly click "Accept" on terms of service. An ethical AI framework demands transparent data policies where users genuinely understand what data is being collected and how the AI models will use it.</p>
+        </section>
+
+        <section id="job-displacement" class="content-section">
+            <h2>4. Future Implications</h2>
+            <h3>Job Displacement</h3>
+            <p>The automation of cognitive labor via Generative AI threatens to disrupt the global workforce. From an ethical standpoint, society must consider how to support displaced workers. Concepts like Universal Basic Income (UBI) and massive retraining programs are heavily debated in this sphere.</p>
+
+            <h3 id="human-agency">Preserving Human Agency</h3>
+            <p>Ultimately, the goal of AI should be to augment human capabilities, not replace human judgment. In healthcare, law, and education, the final decision-making power must remain in human hands to preserve empathy, context, and moral accountability.</p>
+        </section>
+
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Get all dropdown buttons
+            var dropdowns = document.getElementsByClassName("dropdown-btn");
+
+            for (let i = 0; i < dropdowns.length; i++) {
+                dropdowns[i].addEventListener("click", function() {
+                    // Toggle the 'active' class to rotate the arrow and change color
+                    this.classList.toggle("active");
+
+                    // Get the next element (which is the dropdown container)
+                    var dropdownContent = this.nextElementSibling;
+
+                    // Smooth transition for the height
+                    if (dropdownContent.style.maxHeight) {
+                        // If it's open, close it
+                        dropdownContent.style.maxHeight = null;
+                    } else {
+                        // If it's closed, open it to its scroll height
+                        dropdownContent.style.maxHeight = dropdownContent.scrollHeight + "px";
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
