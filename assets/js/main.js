@@ -42,7 +42,7 @@ async function fetchSiteContent() {
 
 function renderNavigation(sections) {
   const navRoot = document.getElementById("sidebar-nav");
-  navRoot.innerHTML = "";
+  navRoot.textContent = "";
 
   sections
     .filter((section) => section.showInNav !== false)
@@ -95,7 +95,7 @@ function createNavLink(href, label) {
 
 function renderSections(siteData) {
   const root = document.getElementById("content-root");
-  root.innerHTML = "";
+  root.textContent = "";
   (siteData.sections || []).forEach((section) => root.appendChild(renderSection(section)));
 }
 
@@ -251,7 +251,9 @@ function renderQuizArea(introParagraphs) {
 
   buttonRow.appendChild(submitButton);
   buttonRow.appendChild(resetButton);
-  panel.appendChild(buttonRow);
+
+  // Important: these buttons must be inside the form so "Check my score" triggers the submit handler.
+  quizForm.appendChild(buttonRow);
 
   const result = document.createElement("div");
   result.id = "quiz-result";
@@ -405,7 +407,7 @@ function setQuizPanelOpen(panel, button, isOpen) {
 }
 
 function renderQuizQuestions(form, questions) {
-  form.innerHTML = "";
+  form.textContent = "";
 
   questions.forEach((question, index) => {
     const fieldset = document.createElement("fieldset");
@@ -485,7 +487,7 @@ function textElement(tag, text, className = "") {
 
 function renderLoadError(error) {
   const root = document.getElementById("content-root");
-  root.innerHTML = "";
+  root.textContent = "";
 
   const section = document.createElement("section");
   section.className = "content-section warning-box";
