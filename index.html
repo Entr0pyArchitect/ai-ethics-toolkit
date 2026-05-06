@@ -1,317 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Critical Thinking & AI Ethics | St. Ambrose University</title>
-    <style>
-        :root {
-            --sau-blue: #003087;
-            --sau-gold: #FFB81C;
-            --sau-dark: #001f5a;
-            --text-dark: #333333;
-            --bg-light: #f4f6f8;
-            --white: #ffffff;
-        }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        html { scroll-behavior: smooth; }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: var(--text-dark);
-            background-color: var(--bg-light);
-            display: flex;
-            line-height: 1.6;
-        }
-        .sidebar {
-            width: 300px;
-            height: 100vh;
-            background-color: var(--sau-blue);
-            color: var(--white);
-            position: fixed;
-            top: 0;
-            left: 0;
-            overflow-y: auto;
-            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-            z-index: 1000;
-        }
-        .sidebar-header {
-            padding: 30px 20px;
-            text-align: center;
-            border-bottom: 3px solid var(--sau-gold);
-            background-color: var(--sau-dark);
-        }
-        .sidebar-header h1 {
-            font-size: 1.2rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 10px;
-            color: var(--sau-gold);
-        }
-        .sidebar-header p { font-size: 0.9rem; color: #d1e0f3; }
-        .nav-item { border-bottom: 1px solid rgba(255,255,255,0.1); }
-        .dropdown-btn {
-            width: 100%;
-            background-color: transparent;
-            color: var(--white);
-            padding: 18px 20px;
-            font-size: 1rem;
-            font-weight: bold;
-            border: none;
-            text-align: left;
-            cursor: pointer;
-            transition: background-color 0.3s ease, color 0.3s ease;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .dropdown-btn:hover, .dropdown-btn.active {
-            background-color: var(--sau-dark);
-            color: var(--sau-gold);
-        }
-        .arrow { transition: transform 0.3s ease; font-size: 0.8rem; }
-        .dropdown-btn.active .arrow { transform: rotate(180deg); }
-        .dropdown-container {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out;
-            background-color: rgba(0, 0, 0, 0.15);
-        }
-        .dropdown-container a {
-            display: block;
-            color: #d1e0f3;
-            padding: 12px 20px 12px 40px;
-            text-decoration: none;
-            font-size: 0.95rem;
-            transition: color 0.3s ease, padding-left 0.3s ease;
-        }
-        .dropdown-container a:hover {
-            color: var(--sau-gold);
-            padding-left: 45px;
-            background-color: rgba(255, 255, 255, 0.05);
-        }
-        .main-content {
-            margin-left: 300px;
-            padding: 40px 60px;
-            width: calc(100% - 300px);
-        }
-        .content-section {
-            min-height: 70vh;
-            padding-top: 50px;
-            margin-bottom: 50px;
-            border-bottom: 2px dashed #ccc;
-        }
-        .content-section:last-child { border-bottom: none; }
-        h2 {
-            color: var(--sau-blue);
-            font-size: 2.3rem;
-            margin-bottom: 20px;
-            border-bottom: 4px solid var(--sau-gold);
-            display: inline-block;
-            padding-bottom: 5px;
-        }
-        h3 {
-            color: var(--sau-dark);
-            font-size: 1.4rem;
-            margin-top: 28px;
-            margin-bottom: 12px;
-        }
-        p, li {
-            font-size: 1.05rem;
-            margin-bottom: 18px;
-            text-align: justify;
-        }
-        .infobox {
-            background-color: white;
-            border-left: 5px solid var(--sau-gold);
-            padding: 20px;
-            margin: 20px 0;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            border-radius: 4px;
-        }
-        .note-box {
-            background-color: #fff8e6;
-            border-left: 5px solid var(--sau-blue);
-            padding: 18px;
-            margin: 18px 0;
-            border-radius: 4px;
-        }
-        ul { padding-left: 24px; margin-bottom: 18px; }
-        @media (max-width: 768px) {
-            body { flex-direction: column; }
-            .sidebar { width: 100%; height: auto; position: relative; }
-            .main-content { margin-left: 0; width: 100%; padding: 20px; }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Critical Thinking & AI Ethics Toolkit | St. Ambrose University</title>
+  <meta name="description" content="A student-facing AI ethics toolkit created for PHIL 102 at St. Ambrose University." />
+  <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
-    <nav class="sidebar">
-        <div class="sidebar-header">
-            <h1>St. Ambrose University</h1>
-            <p>Critical Thinking & AI Ethics Toolkit</p>
-        </div>
+  <!--
+    SAU AI Ethics Toolkit
+    Editing notes:
+    - Page structure lives here in index.html.
+    - Styling lives in assets/css/styles.css.
+    - Interactive behavior lives in assets/js/main.js.
+    - Most editable site content lives in content/content.json.
+    - Deploy through Cloudflare Pages and view the live HTTPS URL.
+  -->
 
-        <div class="nav-item">
-            <button class="dropdown-btn">1. AI Basics <span class="arrow">&#9660;</span></button>
-            <div class="dropdown-container">
-                <a href="#what-is-ai">What is AI?</a>
-                <a href="#history">History & Background</a>
-                <a href="#strengths">Strengths & Limitations</a>
-                <a href="#job-market">Effects on the Job Market</a>
-            </div>
-        </div>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
-        <div class="nav-item">
-            <button class="dropdown-btn">2. Meaningful Work & Career Readiness <span class="arrow">&#9660;</span></button>
-            <div class="dropdown-container">
-                <a href="#meaningful-work">Workplace Changes</a>
-                <a href="#industry-impact">Industry Impact</a>
-                <a href="#future-skills">Future Skills</a>
-            </div>
-        </div>
+  <header class="mobile-topbar">
+    <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation" aria-expanded="false">
+      ☰ Menu
+    </button>
+    <span class="mobile-title">AI Ethics Toolkit</span>
+  </header>
 
-        <div class="nav-item">
-            <button class="dropdown-btn">3. Privacy & Data Security <span class="arrow">&#9660;</span></button>
-            <div class="dropdown-container">
-                <a href="#privacy-overview">Privacy Overview</a>
-                <a href="#data-leakage">Data Leakage & Model Security</a>
-                <a href="#compliance">Regulatory Compliance</a>
-            </div>
-        </div>
+  <aside class="sidebar" id="sidebar" aria-label="Site navigation">
+    <div class="sidebar-header">
+      <!-- Replace this image if the group chooses a different final brand mark. -->
+      <img src="assets/img/sau-shield.png" alt="St. Ambrose University shield" class="sidebar-badge" />
+      <h1>St. Ambrose University</h1>
+      <p>Critical Thinking & AI Ethics Toolkit</p>
+      <p class="sidebar-note">Student resource guide</p>
+    </div>
 
-        <div class="nav-item">
-            <button class="dropdown-btn">4. Responsible AI Use in the Classroom <span class="arrow">&#9660;</span></button>
-            <div class="dropdown-container">
-                <a href="#classroom-balance">Balance & AI Grading</a>
-                <a href="#learning-support">AI as a Support Tool</a>
-                <a href="#academic-integrity">Academic Integrity</a>
-            </div>
-        </div>
+    <!-- Navigation is generated from content/content.json by main.js. -->
+    <nav id="sidebar-nav" class="sidebar-nav" aria-label="Toolkit sections"></nav>
+  </aside>
 
-        <div class="nav-item">
-            <button class="dropdown-btn">5. Responsible AI Use Beyond the Classroom <span class="arrow">&#9660;</span></button>
-            <div class="dropdown-container">
-                <a href="#ethical-use">What is Ethical AI Use?</a>
-                <a href="#outside-use">Where AI is Used</a>
-                <a href="#open-questions">Open Questions</a>
-            </div>
-        </div>
+  <main class="main-content" id="main-content">
+    <!-- Main content is generated from content/content.json by main.js. -->
+    <div id="content-root" class="content-root">
+      <section class="loading-card" aria-live="polite">
+        <h2>Loading AI Ethics Toolkit...</h2>
+        <p>If this message does not disappear, check that content/content.json is present and that the site has deployed correctly.</p>
+      </section>
+    </div>
+  </main>
 
-        <div class="nav-item">
-            <button class="dropdown-btn">6. Interviews <span class="arrow">&#9660;</span></button>
-            <div class="dropdown-container">
-                <a href="#interviews">Interview Hub</a>
-                <a href="#clips">Clips & Highlights</a>
-            </div>
-        </div>
-    </nav>
+  <button id="back-to-top" class="back-to-top" type="button" aria-label="Back to top">↑</button>
 
-    <main class="main-content">
-        <section id="what-is-ai" class="content-section">
-            <h2>1. AI Basics</h2>
-            <h3>What is AI?</h3>
-            <p>AI, or artificial intelligence, is the science of creating machines that can perform tasks that normally require human intelligence, such as reasoning, learning, problem solving, and understanding language. It is a rapidly developing technology that is moving from simply answering questions to becoming a system that can assist, plan, and interact more like a digital partner. AI is not just about copying human behavior, but about designing systems that can make intelligent decisions in different situations.</p>
-            <p>While AI creates exciting opportunities for innovation and problem solving, it is still important for society to think carefully about ethics, responsible use, and how humans will manage its growing influence. When AI is incorporated into the modern world, life and tasks can become more efficient with broad practical capabilities.</p>
-
-            <div class="infobox" id="history">
-                <h3>Brief History & Background</h3>
-                <p>Artificial intelligence began around the 1950s, when researchers such as Alan Turing explored whether machines could think. John McCarthy formally introduced the term AI in 1956, and research expanded during the late 1950s and 1960s as programmers attempted to build systems that could mimic human-like intelligence. In the mid-1960s, the U.S. Department of Defense became a major source of AI research funding, helping establish laboratories across the world. In recent years, major advances in data availability and computing power have fueled machine learning tools such as ChatGPT and brought AI into everyday life.</p>
-            </div>
-
-            <h3 id="strengths">Strengths & Limitations</h3>
-            <p>AI offers several strengths, including reducing routine human error, automating repetitive work, and processing large amounts of data quickly and consistently without fatigue. This can improve workflow, speed up decision making, and make many tasks less time consuming. AI has shown practical value in areas such as healthcare, productivity, and research support.</p>
-            <p>At the same time, AI has clear limitations. Generative tools can be inaccurate, biased, contradictory, or prone to hallucinations, meaning they may generate claims without reliable grounding. There are also concerns about overreliance, especially if students or workers begin using AI in ways that weaken independent thinking. These weaknesses show why AI still requires human oversight and clear ethical guidelines.</p>
-
-            <h3 id="job-market">AI Effects on the Job Market</h3>
-            <p>AI is changing the job market by automating some existing tasks while also creating new roles, industries, and skill demands. Its impact differs across industries, but the overall pattern is clear: routine work becomes easier to automate, while jobs that require analysis, adaptability, creativity, and human interaction become more important. AI is not only replacing some tasks; it is also changing what workers need to know and how they prepare for future careers.</p>
-        </section>
-
-        <section id="meaningful-work" class="content-section">
-            <h2>2. Meaningful Work & Career Readiness</h2>
-            <h3>How AI is Affecting Work</h3>
-            <p>The rise of AI is changing the workforce by increasing efficiency while also creating a need for new employee skills. Across the completed work scenarios provided by the research group, three skill areas remain especially important: technical proficiency, creative problem-solving, and interpersonal ability. Businesses still need to invest in training and adaptability so workers can keep up with evolving tools and remain competitive.</p>
-
-            <h3 id="industry-impact">Impact on Specific Industries</h3>
-            <p>Artificial intelligence is changing workforce expectations in areas such as manufacturing by increasing demand for more advanced technical skills, including data analysis and machine understanding. This shift creates opportunities for highly skilled workers, but it also creates a gap that organizations must address through ongoing education, training, and strategic planning.</p>
-
-            <div class="infobox" id="future-skills">
-                <h3>Changes in Skills</h3>
-                <p>AI is rapidly changing the future of work by increasing productivity, automating tasks, and creating new kinds of jobs. At the same time, it is pushing some traditional roles to the side. As AI becomes more integrated into the workplace, workers increasingly need digital literacy, critical thinking, creativity, emotional intelligence, and the ability to learn continuously. This means career readiness now involves not just technical ability, but also flexibility and ethical awareness.</p>
-            </div>
-        </section>
-
-        <section id="privacy-overview" class="content-section">
-            <h2>3. Privacy & Data Security</h2>
-            <h3>Privacy Overview</h3>
-            <p>Privacy and data security in AI use come down to caution, awareness, and strong safeguards. Although AI tools can be useful for planning, drafting, and generating ideas, they should not be treated as secure places to store highly sensitive personal information. Users should avoid sharing things like Social Security numbers, full financial records, or identification documents. AI is better used as a starting point that provides general guidance, not as a final authority for high-stakes decisions.</p>
-
-            <h3 id="data-leakage">Data Leakage & Securing AI Models</h3>
-            <p>A key concern is data leakage and the security of AI systems. Since AI models rely on very large and sometimes uncertain data sources, they can produce inaccurate or generalized outputs. Organizations that store sensitive data, such as healthcare systems and financial institutions, are frequent targets for cyberattacks, which makes strong security practices essential. Protecting data requires both technical safeguards and careful judgment about what users choose to share.</p>
-
-            <div class="infobox" id="compliance">
-                <h3>Regulatory Compliance</h3>
-                <p>Regulatory frameworks such as GDPR, HIPAA, and PCI DSS play an important role in setting standards for how data should be collected, stored, and protected. Following these regulations helps organizations reduce legal risk, improve internal governance, and maintain public trust. Responsible AI use depends on both compliance and human judgment to ensure AI systems are effective and trustworthy.</p>
-            </div>
-        </section>
-
-        <section id="classroom-balance" class="content-section">
-            <h2>4. Responsible & Effective AI Use in the Classroom</h2>
-            <h3>Balance, AI Grading, and Accuracy</h3>
-            <p>Ethical AI use in the classroom centers on balance. AI-assisted grading can reduce instructor workload and provide students with faster, more consistent feedback, especially for objective tasks or early drafts. This can create more chances for revision and improvement. However, AI systems may miss deeper elements like organization, intent, nuance, and creativity, and they may also introduce bias depending on how they are trained.</p>
-
-            <h3 id="learning-support">AI as a Supporting Tool for Learning</h3>
-            <p>Because of these limitations, AI works best as a support tool rather than a replacement for human judgment. In higher education, tools such as ChatGPT can help explain concepts, improve writing, and support productivity when used responsibly. When students use AI thoughtfully, it can help them refine their thinking, ask better questions, and build skills that matter in an AI-integrated future.</p>
-
-            <div class="infobox" id="academic-integrity">
-                <h3>Plagiarism, Responsible Research, and Study Habits</h3>
-                <p>AI also raises concerns about cheating, plagiarism, and overreliance. Many educators are responding by setting clear expectations for citations, verification, oral assessments, and responsible research practices. Ethical classroom use means students still need to do the thinking, evaluate the output, and remain accountable for the work they submit.</p>
-            </div>
-        </section>
-
-        <section id="ethical-use" class="content-section">
-            <h2>5. Responsible & Effective AI Use Beyond the Classroom</h2>
-            <h3>What is Ethical AI Use?</h3>
-            <p>Ethical AI use outside the classroom means using AI in ways that are transparent, responsible, and grounded in human judgment. AI can be helpful across many settings, but it should not replace accountability, professional expertise, or informed decision making. Ethical use also means understanding where AI can help, where it introduces risk, and what information should never be shared casually.</p>
-
-            <h3 id="outside-use">Where AI is Used Outside the Classroom</h3>
-            <p>Outside the classroom, AI is used in healthcare, business, finance, manufacturing, customer service, transportation, cybersecurity, and everyday consumer tools. It is used for things like automation, data analysis, personalization, drafting, scheduling, predictive systems, and decision support. These uses can increase efficiency, but they also raise questions about fairness, bias, privacy, and the human role in decision making.</p>
-
-            <div class="note-box" id="open-questions">
-                <h3>Open Questions Still Being Researched</h3>
-                <ul>
-                    <li>Environmental effects of AI were noted as a topic the research group has not fully covered yet.</li>
-                    <li>The replacement of human relationships or human connection with AI was also noted as not yet fully addressed.</li>
-                    <li>Future implications may be expanded later as either a separate section or a concluding section once additional group content is completed.</li>
-                </ul>
-            </div>
-        </section>
-
-        <section id="interviews" class="content-section">
-            <h2>6. Interviews</h2>
-            <h3>Interview Hub</h3>
-            <p>This section is reserved for the project interview content. The current planning notes indicate a total of 8 interviews, with full interviews housed here and shortened clips placed into other relevant sections of the site as needed.</p>
-
-            <div class="infobox" id="clips">
-                <h3>Clips & Highlights</h3>
-                <p>Shortened interview clips, summaries, or embedded media can be added here after the interviews team finalizes the material. This gives the website a dedicated space for primary voices and supporting evidence without changing the overall site structure.</p>
-            </div>
-        </section>
-    </main>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var dropdowns = document.getElementsByClassName("dropdown-btn");
-            for (let i = 0; i < dropdowns.length; i++) {
-                dropdowns[i].addEventListener("click", function() {
-                    this.classList.toggle("active");
-                    var dropdownContent = this.nextElementSibling;
-                    if (dropdownContent.style.maxHeight) {
-                        dropdownContent.style.maxHeight = null;
-                    } else {
-                        dropdownContent.style.maxHeight = dropdownContent.scrollHeight + "px";
-                    }
-                });
-            }
-        });
-    </script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>

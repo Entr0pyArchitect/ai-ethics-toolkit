@@ -1,0 +1,595 @@
+{
+  "_meta": {
+    "project": "SAU AI Ethics Toolkit",
+    "status": "scope-complete preview build",
+    "note": "JSON does not support real comments. Editable notes are stored in this _meta object and in each section status field.",
+    "_comment": "Edit section text here. Keep ids stable so navigation links continue to work. JSON cannot use normal code comments."
+  },
+  "quiz": {
+    "passPercent": 80,
+    "questions": [
+      {
+        "question": "What is the safest way to use AI for school research?",
+        "options": [
+          "Use AI as a starting point, then verify claims with reliable sources.",
+          "Copy the answer directly if it sounds correct.",
+          "Use AI instead of reading course materials.",
+          "Assume AI is always current and unbiased."
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Which information should students avoid putting into AI tools?",
+        "options": [
+          "General brainstorming ideas",
+          "Publicly available article titles",
+          "Social Security numbers, identification documents, or full financial records",
+          "A request for a study schedule"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "question": "According to the toolkit, AI is most likely to affect work by doing what?",
+        "options": [
+          "Replacing every occupation immediately",
+          "Changing tasks and skill demands within many jobs",
+          "Removing the need for communication skills",
+          "Making human judgment unnecessary"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "question": "Why should AI not replace human connection?",
+        "options": [
+          "Because AI cannot provide real emotion, mutual understanding, or personal growth in the same way people can",
+          "Because AI has no possible use outside school",
+          "Because AI only works for math",
+          "Because AI is always illegal to use"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "What is one responsible student action when using AI in class?",
+        "options": [
+          "Ignore the syllabus and use AI however you want",
+          "Use AI to bypass learning",
+          "Check course expectations, cite or disclose AI use when required, and verify the output",
+          "Submit AI work without reading it"
+        ],
+        "correctIndex": 2
+      }
+    ]
+  },
+  "sections": [
+    {
+      "id": "home",
+      "type": "hero",
+      "kicker": "PHIL 102 Class Project",
+      "title": "Critical Thinking & AI Ethics Toolkit",
+      "navTitle": "0. Home / Toolkit Overview",
+      "summary": [
+        "This website is a student-facing resource guide about artificial intelligence, ethical use, privacy, career readiness, and responsible decision-making. It was built as a class project for St. Ambrose University and is designed to help students understand not only what AI can do, but how to use it without undermining independent thinking.",
+        "The toolkit is now a structured review build. Research content, visuals, bibliography material, survey direction, and a built-in quiz workflow are represented. The main remaining dependency is the interview group's final transcripts and any final video/embed decisions."
+      ],
+      "visual": {
+        "src": "assets/img/graphic-ai-thinking.png",
+        "alt": "Illustration of a person thinking about AI",
+        "title": "How to use this toolkit",
+        "paragraphs": [
+          "Read each section as practical guidance rather than as a long research paper. Each topic explains what students should know, what risks to watch for, and what actions they can take.",
+          "The quiz and certification section is built directly into the site so the group can review the workflow before the final release. Passing users can unlock the certification badge and download it."
+        ]
+      },
+      "cards": [
+        {
+          "title": "Audience",
+          "body": [
+            "Students who want practical guidance on AI use in school, work, and everyday life."
+          ]
+        },
+        {
+          "title": "Purpose",
+          "body": [
+            "To turn class research into a useful toolkit with readable sections, visuals, interviews, sources, and a built-in knowledge check."
+          ]
+        },
+        {
+          "title": "Current status",
+          "body": [
+            "Core content, structure, bibliography, and the quiz/certification prototype are included. Interview transcripts remain pending from the interview group."
+          ]
+        }
+      ],
+      "subsections": [
+        {
+          "id": "student-action-summary",
+          "title": "Quick Student Action Guide",
+          "boxType": "action-box",
+          "paragraphs": [
+            "A responsible student does not have to avoid AI completely. The goal is to use AI in a way that supports learning, protects privacy, and keeps human judgment central."
+          ],
+          "actions": [
+            "Use AI to brainstorm, organize, explain, summarize, and study \u2014 not to replace your own thinking.",
+            "Read your syllabus and ask your instructor what AI use is allowed before submitting work.",
+            "Verify AI answers with course materials, scholarly sources, or trusted references.",
+            "Do not share private, financial, medical, identifying, or copyrighted information with AI tools unless you have clear permission and a safe reason.",
+            "Build career skills AI cannot easily replace: critical thinking, creativity, communication, adaptability, and ethical judgment."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ai-basics",
+      "title": "1. AI Basics",
+      "navTitle": "1. AI Basics",
+      "summary": [
+        "Artificial intelligence is the science of creating machines or systems that can perform tasks normally associated with human intelligence, including reasoning, learning, problem solving, pattern recognition, and language understanding. AI is not only about copying human behavior; it is about designing systems that can assist with decisions and tasks in different situations.",
+        "Modern AI tools are becoming part of everyday life, school, and work. Because of that, students need to understand both the opportunities and the limits of AI before relying on it."
+      ],
+      "subsections": [
+        {
+          "id": "what-is-ai",
+          "title": "What is AI?",
+          "paragraphs": [
+            "AI can answer questions, generate text, summarize information, create images, assist with planning, and help users explore ideas. These tools can feel like digital partners, but they are still systems built from data, algorithms, and human design choices.",
+            "A useful way to think about AI is this: it can support human reasoning, but it should not replace human responsibility. Students should understand what the tool is doing, why it may be useful, and where it may be unreliable."
+          ]
+        },
+        {
+          "id": "generative-ai",
+          "title": "What is Generative AI?",
+          "boxType": "infobox",
+          "paragraphs": [
+            "Generative AI is a type of AI that creates new content such as text, images, summaries, outlines, code, audio, or study materials. ChatGPT and image generators are common examples. These tools generate likely responses based on patterns in data, which means they can be helpful but can also be wrong, biased, incomplete, or overconfident.",
+            "For students, the most important point is that generative AI should be used as a support tool. It can help you start, organize, or review work, but it should not become the source of your final judgment."
+          ]
+        },
+        {
+          "id": "history",
+          "title": "Brief History & Background",
+          "paragraphs": [
+            "Artificial intelligence began as a formal research field around the 1950s when researchers such as Alan Turing explored whether machines could think. John McCarthy introduced the term artificial intelligence in the 1950s, and early researchers worked on systems that could mimic aspects of human reasoning and problem solving.",
+            "AI research grew rapidly during the late 1950s and 1960s, including support from government and defense-related research. Progress later slowed during periods sometimes called AI winters, but advances in computing power, data availability, and machine learning led to the modern AI tools students use today."
+          ]
+        },
+        {
+          "id": "strengths",
+          "title": "Strengths of AI",
+          "paragraphs": [
+            "AI can process large amounts of information quickly, automate repetitive tasks, support decision-making, assist with accessibility, and help users generate ideas. It can also support fields such as healthcare, education, business, and research by making some workflows more efficient.",
+            "For students, AI can be useful for brainstorming, outlining, generating practice questions, summarizing long material, checking organization, and explaining difficult concepts in simpler terms."
+          ]
+        },
+        {
+          "id": "limitations",
+          "title": "Limitations and Risks",
+          "boxType": "warning-box",
+          "paragraphs": [
+            "AI can make mistakes, produce biased answers, contradict itself, or hallucinate information that sounds real but is not accurate. It may also fail to explain its reasoning in a way that humans can fully inspect or verify.",
+            "The biggest student risk is overreliance. If AI does too much of the thinking, students may lose chances to practice reasoning, writing, creativity, and independent judgment. That is why AI output should be checked, questioned, and connected back to real learning."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "classroom-use",
+      "title": "2. Responsible AI Use in the Classroom",
+      "navTitle": "2. Classroom Use",
+      "summary": [
+        "Responsible classroom AI use is about balance. AI can help students learn, but it can also create plagiarism, accuracy, bias, and overreliance problems when used carelessly.",
+        "The safest approach is to treat AI as a learning assistant, not as the author, thinker, or final authority."
+      ],
+      "subsections": [
+        {
+          "id": "ethical-ai-classroom",
+          "title": "What is Ethical AI Use in School?",
+          "boxType": "action-box",
+          "paragraphs": [
+            "Ethical AI use means being transparent, following class rules, protecting data, verifying results, and using AI in ways that strengthen rather than replace learning. Students should read their syllabi, ask instructors about permitted AI use, and disclose or cite AI use when required.",
+            "A good test is simple: if AI helps you understand, revise, study, or organize your ideas, it may support learning. If AI does the assignment for you or hides your lack of understanding, it undermines learning."
+          ]
+        },
+        {
+          "id": "plagiarism-research-study",
+          "title": "Plagiarism, Responsible Research, and Study Habits",
+          "paragraphs": [
+            "AI can make plagiarism easier when students copy generated text or submit work they did not meaningfully create. It can also create research problems when students accept AI-generated claims without checking the original source. Because AI can summarize incorrectly, students should treat AI as a starting point and then verify claims with reliable sources.",
+            "Responsible study use includes asking AI to explain a concept, generate practice questions, create flashcards, suggest an outline, or help compare ideas. It becomes irresponsible when it replaces reading, thinking, writing, or source evaluation."
+          ],
+          "actions": [
+            "Check your syllabus and instructor expectations before using AI on graded work.",
+            "Use AI to ask better questions, not to avoid doing the work.",
+            "Compare AI summaries against original articles, textbooks, or class notes.",
+            "Avoid submitting AI-generated writing as your own work unless your instructor explicitly allows that use.",
+            "Use campus support resources such as writing help, academic support, and instructor office hours when expectations are unclear."
+          ]
+        },
+        {
+          "id": "ai-learning-support",
+          "title": "AI as a Supporting Tool for Learning",
+          "boxType": "infobox",
+          "paragraphs": [
+            "AI can support learning when it helps students practice, reflect, and improve. For example, students can ask AI to make practice quiz questions, explain difficult terms, create a study schedule, compare two concepts, or identify weak parts of a draft.",
+            "The best student use is active. Instead of asking AI to give the answer, students can ask AI to quiz them, challenge their reasoning, explain why an answer may be wrong, or suggest what to review next."
+          ]
+        },
+        {
+          "id": "ai-grading-accuracy",
+          "title": "AI Grading, Accuracy, and Human Judgment",
+          "paragraphs": [
+            "AI-assisted grading may help instructors provide faster feedback or manage repetitive grading tasks, but it should not replace human judgment. AI may miss deeper qualities such as creativity, intent, organization, context, and fairness.",
+            "Accuracy is also a major issue. Even advanced AI systems can confidently present incorrect or incomplete information. For students, that means AI answers should be checked before being used in assignments, decisions, or research."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "privacy-data-copyright",
+      "title": "3. Privacy, Data Security & Copyright",
+      "navTitle": "3. Data Security",
+      "summary": [
+        "AI tools can be useful, but students should be careful about what they share. Privacy and data security depend on awareness, caution, and responsible habits.",
+        "A safe rule is this: if you would not post it publicly or hand it to a stranger, do not casually paste it into an AI tool."
+      ],
+      "subsections": [
+        {
+          "id": "what-not-to-share",
+          "title": "What Not to Share with AI",
+          "boxType": "warning-box",
+          "paragraphs": [
+            "Students should avoid entering sensitive personal information into AI tools, including Social Security numbers, full financial records, passwords, private medical information, identification documents, private addresses, and confidential school or workplace material.",
+            "AI should be used as a starting point for general guidance, not as a secure vault or final professional decision-maker. For financial, medical, legal, or academic policy decisions, students should confirm information with qualified professionals or official university resources."
+          ]
+        },
+        {
+          "id": "data-leakage",
+          "title": "Data Leakage and Model Security",
+          "paragraphs": [
+            "Data leakage happens when sensitive information is exposed or used in unintended ways. AI systems and the organizations using them can become targets for cyberattacks, especially when they handle healthcare, financial, educational, or business data.",
+            "Students should understand that privacy policies do not eliminate all risk. A tool may have safeguards and still be vulnerable to breaches, misuse, or accidental exposure. Strong security requires both technical protections and careful decisions by users."
+          ]
+        },
+        {
+          "id": "regulatory-compliance",
+          "title": "Regulatory Compliance",
+          "boxType": "infobox",
+          "paragraphs": [
+            "Regulatory compliance means following laws and standards that govern how data is collected, stored, shared, and protected. Frameworks such as GDPR, HIPAA, and PCI DSS help organizations reduce risk, avoid legal penalties, and protect public trust.",
+            "For students, the practical lesson is that data is not just information; it is a responsibility. When AI interacts with personal, medical, financial, or institutional data, privacy and security rules matter."
+          ]
+        },
+        {
+          "id": "copyright-data",
+          "title": "Copyrighted Data and Submitted Information",
+          "paragraphs": [
+            "AI raises copyright concerns because models may be trained on large collections of text, images, code, and media. Students also need to be careful about uploading copyrighted class materials, unpublished drafts, private notes, or someone else\u2019s work into AI tools without permission.",
+            "A responsible approach is to use AI for general brainstorming and learning support while avoiding the upload of private, copyrighted, or restricted content unless the instructor, owner, or policy clearly allows it."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "jobs-career",
+      "title": "4. AI, Jobs & Career Readiness",
+      "navTitle": "4. Jobs & Career Readiness",
+      "summary": [
+        "AI is changing the workforce by automating some routine tasks, creating new roles, and increasing the value of skills such as critical thinking, creativity, communication, adaptability, and digital literacy.",
+        "The goal for students is not to compete against AI as if it were only a threat. The goal is to learn how to work responsibly with AI while building skills that remain deeply human."
+      ],
+      "visual": {
+        "src": "assets/img/graphic-ai-impacts.png",
+        "alt": "Illustration of a person thinking about jobs, funds, and environment",
+        "title": "AI changes tasks, skills, and opportunities",
+        "paragraphs": [
+          "Research gathered by the class shows that AI often changes tasks within jobs rather than erasing whole careers at once. Routine and repetitive work may be automated, while human-centered skills become more important.",
+          "This section gives students practical ways to prepare for a workforce shaped by AI."
+        ]
+      },
+      "subsections": [
+        {
+          "id": "job-market-effects",
+          "title": "Effects on the Job Market",
+          "paragraphs": [
+            "AI does not only replace work; it also reshapes work. Repetitive tasks may become automated, while new roles emerge around building, managing, evaluating, and ethically using AI systems.",
+            "Examples of growing AI-related roles include data scientists, machine learning engineers, database administrators, AI trainers, system managers, and AI ethics specialists. At the same time, routine support roles such as call center, email support, or help desk tasks may change as chatbots and automated systems become more common."
+          ]
+        },
+        {
+          "id": "industry-impact",
+          "title": "Impact on Specific Industries",
+          "paragraphs": [
+            "AI affects different industries in different ways. In healthcare, it can support diagnostics, appointment tracking, workflow management, and data analysis while still requiring doctors, nurses, and professionals to make human decisions. In manufacturing, AI increases demand for workers who understand data, machines, automation, and process improvement.",
+            "In business, marketing, finance, education, and customer service, AI can increase productivity and support analysis, but people still value authenticity, clear communication, and human judgment. This means many jobs are evolving rather than disappearing completely."
+          ]
+        },
+        {
+          "id": "meaningful-work",
+          "title": "Meaningful Work in an AI Era",
+          "boxType": "infobox",
+          "paragraphs": [
+            "Meaningful work is more than simply being busy. It often involves work that serves others, develops skills, supports purpose, or allows someone to make a real contribution. AI can either support or weaken meaningful work depending on how it is used.",
+            "If AI handles repetitive tasks, people may have more time for creative, relational, strategic, or service-oriented work. But if AI removes too much human agency, workers may feel less connected to the results of their labor. The ethical challenge is to use AI in ways that enhance human contribution rather than erase it."
+          ]
+        },
+        {
+          "id": "career-steps",
+          "title": "Concrete Career Readiness Steps for Students",
+          "boxType": "action-box",
+          "paragraphs": [
+            "Students can prepare for an AI-shaped workforce by building both technical and human-centered skills."
+          ],
+          "actions": [
+            "Practice AI literacy: learn what AI can do, where it fails, and how to verify output.",
+            "Build digital literacy through tools used in your field, such as spreadsheets, research databases, coding basics, design tools, or data tools.",
+            "Strengthen communication by learning how to explain AI-assisted work clearly and ethically.",
+            "Develop critical thinking by checking AI answers against evidence, context, and real sources.",
+            "Practice adaptability by learning new tools without becoming dependent on them.",
+            "Protect your professional integrity by being transparent when AI contributes to your work."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "outside-classroom",
+      "title": "5. Responsible AI Use Beyond the Classroom",
+      "navTitle": "5. Outside Classroom",
+      "summary": [
+        "AI is already used outside school in healthcare, finance, transportation, retail, entertainment, customer service, communication, cybersecurity, creative tools, and everyday apps.",
+        "Because AI is increasingly part of daily life, ethical use matters beyond assignments and grades."
+      ],
+      "subsections": [
+        {
+          "id": "ethical-use-outside",
+          "title": "What is Ethical AI Use Outside School?",
+          "paragraphs": [
+            "Ethical AI use outside the classroom means using AI transparently, responsibly, and with awareness of its limits. It means recognizing when AI is helpful, when a human professional is needed, and when a decision should not be automated.",
+            "In work settings, ethical AI use also includes fairness, accountability, privacy, transparency, and consistency between what organizations claim in AI ethics statements and what they actually do."
+          ]
+        },
+        {
+          "id": "where-ai-used",
+          "title": "Where AI is Used and What It Does",
+          "paragraphs": [
+            "AI can assist with diagnoses in healthcare, translation in communication apps, digital content generation in creative tools, fraud detection in finance, personalization in entertainment and retail, and automation in customer service. Many people interact with AI in the background without noticing it.",
+            "These uses can improve speed and efficiency, but they also raise concerns about fairness, privacy, accuracy, and whether humans remain responsible for final decisions."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "human-environment",
+      "title": "6. Human Connection & Environmental Impact",
+      "navTitle": "6. Human + Environment",
+      "summary": [
+        "Two important AI ethics questions go beyond classroom policy: how AI affects human relationships and how AI affects the environment.",
+        "Both topics show that responsible AI use is not only about convenience. It is also about social and environmental consequences."
+      ],
+      "subsections": [
+        {
+          "id": "human-connection",
+          "title": "Replacing Human Connection with AI",
+          "paragraphs": [
+            "AI chatbots and companion tools may feel supportive, especially for people experiencing loneliness, but they cannot fully replace real human relationships. Human connection includes mutual understanding, emotion, growth, accountability, and shared experience in ways AI does not truly possess.",
+            "AI can be useful for reflection, practice, or support, but relying on it too heavily for companionship may increase isolation or reduce the development of real relationships. A responsible approach is to let AI support people without allowing it to replace human connection."
+          ]
+        },
+        {
+          "id": "environmental-effects",
+          "title": "Environmental Effects of AI",
+          "paragraphs": [
+            "AI has environmental costs because large models and data centers require electricity, cooling, hardware, and physical resources. Energy use can increase carbon emissions when powered by fossil fuels, and water use for cooling can strain local resources. Hardware production can also contribute to mining impacts, manufacturing costs, transportation emissions, and electronic waste.",
+            "AI can also support environmental goals, such as energy efficiency, climate monitoring, and resource optimization. This means AI is not simply good or bad for the environment; its impact depends on how it is developed, powered, deployed, and managed."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "interviews",
+      "kind": "interviews",
+      "title": "7. Interviews",
+      "navTitle": "7. Interviews",
+      "summary": [
+        "The interview section brings in real human perspectives about how AI is affecting education and daily life. These interview materials help ground the toolkit in lived experience rather than research alone.",
+        "Two interview video links are available now. Transcript text is still pending from the interview group, so this section uses placeholders and clear status notes."
+      ],
+      "interviews": [
+        {
+          "title": "Education Interview - Kristin Enright",
+          "description": "Interview focused on AI in education, how instructors respond to student use, ethical concerns, and how learning may change as AI becomes more common.",
+          "videoStatus": "Google Drive video link available",
+          "videoUrl": "https://drive.google.com/file/d/146E5xJnOlFjYwdDmwmC3KBc3Puo4YGoI/view?usp=sharing",
+          "transcriptStatus": "Transcript pending from the interview group.",
+          "siteUse": "Embed or link the video, then add transcript text in a dropdown or details block once it is finalized."
+        },
+        {
+          "title": "Coach Bernard Interview",
+          "description": "Interview intended to provide another perspective on AI, learning, and how people are adapting to technology in practical settings.",
+          "videoStatus": "Google Drive video link available",
+          "videoUrl": "https://drive.google.com/file/d/1aNHTd3embWq61RnMULSAIZVI0xa0m-xq/view?invite=COWz-cUB&ts=69f8e0b2",
+          "transcriptStatus": "Transcript pending from the interview group.",
+          "siteUse": "Use this interview to strengthen the toolkit's people-centered perspective once the transcript and final placement are approved."
+        },
+        {
+          "title": "Additional Interview",
+          "description": "A third interview is expected as part of the project materials, but the final link/embed and transcript are still pending.",
+          "videoStatus": "Video link or embed pending",
+          "transcriptStatus": "Transcript pending from the interview group.",
+          "siteUse": "Keep this placeholder until the final interview file and transcript are supplied."
+        }
+      ],
+      "subsections": [
+        {
+          "id": "interview-questions",
+          "title": "Interview Question Themes",
+          "boxType": "note-box",
+          "paragraphs": [
+            "Interview questions include how AI shapes lesson planning, whether AI makes teaching more difficult, whether AI will replace or assist teachers, whether AI is ethical for teachers to use, how students are using AI, and how teachers are adapting."
+          ]
+        }
+      ],
+      "footerNote": "Note: interview transcripts and any final embedded-player decisions remain with the interview group."
+    },
+    {
+      "id": "quiz-badge",
+      "kind": "quiz",
+      "title": "8. Quiz & Certification Badge",
+      "navTitle": "8. Quiz & Certification",
+      "summary": [
+        "This section contains a short in-site knowledge check designed to reinforce the toolkit's key ideas. It is a lightweight review build, but it works as a complete self-contained quiz.",
+        "If a user passes the quiz, the certification badge appears on the page and can be downloaded directly."
+      ],
+      "quizIntro": [
+        "Click the button below to open the quiz. The quiz uses core ideas from the toolkit: responsible school use, privacy, job changes, human connection, and ethical judgment.",
+        "A passing score unlocks the certification badge graphic. The team can swap the questions later without changing the quiz logic."
+      ],
+      "subsections": [
+        {
+          "id": "badge-info",
+          "title": "Badge Workflow Status",
+          "boxType": "infobox",
+          "paragraphs": [
+            "The certification badge visual is included in the project assets. In this build, quiz completion is verified directly on the site, and a passing score reveals the downloadable badge."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bibliography",
+      "kind": "bibliography",
+      "title": "9. Bibliography / Sources",
+      "navTitle": "9. Bibliography",
+      "summary": [
+        "This section organizes the class bibliography by topic. It should be reviewed by the bibliography team and librarian/instructor before final publication.",
+        "The current source list comes from the class bibliography and research group files."
+      ],
+      "sourceGroups": [
+        {
+          "title": "AI Basics",
+          "open": true,
+          "sources": [
+            "Copeland, B. J. History of artificial intelligence (AI). Britannica.",
+            "Lawrence Livermore National Laboratory. The birth of artificial intelligence (AI) research.",
+            "McCarthy, J. What is AI? / Basic Questions. Stanford University.",
+            "Suleyman, M. What is an AI anyway? TED.",
+            "Stryker, C., & Kavlakoglu, E. What is artificial intelligence (AI)? IBM Think.",
+            "de Leon et al. Reflections on the potential and risks of AI for scientific article writing after Scopus AI.",
+            "Vilcarino, J., & Langreo, L. Rising use of AI in schools comes with big downsides for students. Education Week.",
+            "Volkers, H. Limitations of artificial intelligence: Current challenges & future fixes."
+          ]
+        },
+        {
+          "title": "Responsible AI Use in the Classroom",
+          "sources": [
+            "Aaron et al. AI Policy Suggestions. Optimizing AI in Higher Education.",
+            "Bay Atlantic University. Innovative study habits for the digital age: Leveraging AI tools for students.",
+            "Chapman University. Bias in AI.",
+            "Grose, T. K. Disruptive Influence. ASEE Prism.",
+            "Mickle et al. How accurate are Google\u2019s A.I. Overviews? The New York Times.",
+            "Schwartz, S. Is it ethical to use AI to grade? Education Week.",
+            "Silvestrone, S., & Rubman, J. AI-assisted grading: A magic wand or a Pandora\u2019s Box? MIT Sloan.",
+            "Torres-Diaz et al. Artificial intelligence and academic integrity: Exploring plagiarism in Ecuadorian universities.",
+            "University of Colorado Denver. Enhancing learning through AI: Generating better study habits.",
+            "University of Kansas Center for Teaching Excellence. Addressing bias in AI.",
+            "University of Washington Graduate School. Effective and Responsible Use of AI in Research."
+          ]
+        },
+        {
+          "title": "AI Outside the Classroom / Human Connection / Ethical Use",
+          "sources": [
+            "Babu et al. Emotional AI and the rise of pseudo-intimacy.",
+            "Hau, I., & Winthrop, R. What happens when AI chatbots replace real human connection. Brookings.",
+            "Liu, J. Between No-Self and the Algorithm: Buddhist Mind-Nature as Ethical Architecture for AI and Human Self-Realization.",
+            "Maslej, R. Artificial Intelligence Index Report 2025. Stanford HAI.",
+            "Morgan State University. Enhancing everyday life: How AI is revolutionizing your daily experience.",
+            "Rastogi et al. Ethical and social implications of Artificial Intelligence.",
+            "Voicu et al. Towards a sustainable and ethical integration of AI chatbots in higher education.",
+            "Ye & Friginal. Engaging stakeholders, shaping AI ethics: Targeted engagement in corporate AI ethics statements."
+          ]
+        },
+        {
+          "title": "Job Market, Career Readiness, and Meaningful Work",
+          "sources": [
+            "ADP Research Institute. People at Work report.",
+            "Azp\u00farua. Enhance or eliminate? How AI will likely change these jobs. Harvard Business School Working Knowledge.",
+            "Bobitan et al. Shaping tomorrow: anticipating skills requirements based on AI integration.",
+            "Fitzgerald. Why soft skills still matter in the age of AI. Harvard Business School Working Knowledge.",
+            "Gallo. How AI is improving workplace productivity. Harvard Business School Online.",
+            "Krivkovich & Madgavkar. Human skills will matter more than ever in the age of AI. McKinsey Global Institute.",
+            "Lacoviello. How does Artificial Intelligence create new jobs? Forbes Business Council.",
+            "Mearian. AI will kill these jobs, but create new ones too. Computerworld.",
+            "Murray. How Artificial Intelligence is transforming the U.S. Labor Market. MIT Sloan.",
+            "Nica. Exploring the role of Artificial Intelligence in shaping workforce skills within manufacturing industries.",
+            "Tyssedal. Work is meaningful if there are good reasons to do it. Journal of Business Ethics.",
+            "Vicsek, Bokor, & Pataki. Younger generations\u2019 expectations regarding AI in the job market."
+          ]
+        },
+        {
+          "title": "Privacy, Data Security, Compliance, and Copyright/Data Concerns",
+          "sources": [
+            "Eldredge. When sharing with AI, financial savvy still starts with human judgment. William & Mary.",
+            "Farm Bureau Financial Services. Should you trust AI with financial decisions?",
+            "Hogan et al. An Analysis of Cyber Breaches and Effects on Shareholder Wealth.",
+            "Osakwe & Haitula-Waiganjo. Data security and compliance through effective data governance.",
+            "SentinelOne. What is regulatory compliance? Benefits and frameworks.",
+            "Silvestri et al. Cyber threat assessment and management for securing healthcare ecosystems using NLP."
+          ]
+        },
+        {
+          "title": "Environmental Effects of AI",
+          "sources": [
+            "Zewe, A. Explained: Generative AI\u2019s environmental impact. MIT News.",
+            "Girolimon, M. Understanding the environmental impact of Artificial Intelligence. Southern New Hampshire University.",
+            "East Carolina University Libraries. Negative environmental impacts exacerbated by AI."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "credits",
+      "kind": "credits",
+      "title": "10. Credits",
+      "navTitle": "10. Credits",
+      "summary": [
+        "This section is intentionally marked as pending because the credits document still has incomplete names and roles. Do not publish final credits until each student confirms how they want their contribution listed.",
+        "The current preview organizes known contribution areas so the class can fill in missing details."
+      ],
+      "creditGroups": [
+        {
+          "title": "Website / Formatting / Development",
+          "names": [
+            "Austin Engels \u2014 website deployment, GitHub/Cloudflare workflow, formatting integration, site structure, and implementation support",
+            "Additional website team members \u2014 pending final class confirmation"
+          ]
+        },
+        {
+          "title": "Research Team",
+          "names": [
+            "Carlos Huizar \u2014 Research Team",
+            "Colin / Loren / Carlos and additional research contributors \u2014 pending final confirmation"
+          ]
+        },
+        {
+          "title": "Interview Team",
+          "names": [
+            "Nazaria Almanza-Gustafson \u2014 Interview Team and bibliography editor/formatter",
+            "Ross, Collin, AJ, Mike, Sam, Nazaria, Olivia \u2014 interview/video group names from class notes; roles pending final confirmation"
+          ]
+        },
+        {
+          "title": "Survey / Quiz / Badge Support",
+          "names": [
+            "Maya and Addy \u2014 survey group names from class notes; exact roles pending final confirmation",
+            "Graphic/design contributors \u2014 badge and visual assets pending final attribution"
+          ]
+        },
+        {
+          "title": "Notes / Scribes",
+          "names": [
+            "Mike and AJ \u2014 notes group names from class notes; exact role wording pending final confirmation"
+          ]
+        }
+      ],
+      "footerNote": "Publish this section only after the class confirms final names and roles. Several roles were still unfinished in the shared credits document."
+    }
+  ]
+}
