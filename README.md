@@ -7,6 +7,8 @@ This folder contains the review build of the **St. Ambrose University Critical T
 ```text
 sau-ai-ethics-toolkit/
 ├── index.html                # Main HTML shell
+├── favicon.ico               # Browser tab icon
+├── _headers                  # Cloudflare Pages security headers
 ├── assets/
 │   ├── css/styles.css        # Visual design
 │   ├── js/main.js            # Interactivity and content rendering
@@ -42,6 +44,7 @@ sau-ai-ethics-toolkit/
 - Site text from `content/content.json` is rendered with `textContent`, not raw HTML.
 - The site does not use `JavaScript eval`, inline event handlers, external JavaScript libraries, or user-submitted content.
 - External interview links open with `rel="noopener noreferrer"`.
+- `_headers` adds basic Cloudflare Pages security headers, including a restrictive Content Security Policy.
 - Because this is a static client-side site, the quiz is appropriate for a class learning badge, but it is not a tamper-proof official certification system.
 
 ## Note for the group
