@@ -233,6 +233,12 @@ function renderQuizArea(introParagraphs) {
   const quizForm = document.createElement("form");
   quizForm.id = "knowledge-check-form";
   quizForm.setAttribute("aria-label", "AI Ethics Toolkit knowledge check");
+
+  // Questions render here so the submit/reset buttons do not get deleted.
+  const questionList = document.createElement("div");
+  questionList.id = "quiz-question-list";
+  quizForm.appendChild(questionList);
+
   panel.appendChild(quizForm);
 
   const buttonRow = document.createElement("div");
@@ -365,7 +371,8 @@ function initializeQuiz(quizData) {
   const toggleButton = document.getElementById("quiz-toggle");
   if (!form || !quizData || !quizPanel || !toggleButton) return;
 
-  renderQuizQuestions(form, quizData.questions || []);
+  const questionList = document.getElementById("quiz-question-list");
+  renderQuizQuestions(questionList, quizData.questions || []);
 
   toggleButton.addEventListener("click", () => {
     const isOpen = !quizPanel.classList.contains("open");
@@ -406,8 +413,8 @@ function setQuizPanelOpen(panel, button, isOpen) {
   }
 }
 
-function renderQuizQuestions(form, questions) {
-  form.textContent = "";
+function renderQuizQuestions(questionList, questions) {
+  questionList.textContent = "";
 
   questions.forEach((question, index) => {
     const fieldset = document.createElement("fieldset");
@@ -431,7 +438,7 @@ function renderQuizQuestions(form, questions) {
       fieldset.appendChild(label);
     });
 
-    form.appendChild(fieldset);
+    questionList.appendChild(fieldset);
   });
 }
 
