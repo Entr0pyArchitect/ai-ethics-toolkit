@@ -120,7 +120,7 @@
       "navTitle": "0. Home / Toolkit Overview",
       "summary": [
         "This website is a student-facing resource guide about artificial intelligence, ethical use, privacy, career readiness, and responsible decision-making. It was built as a St. Ambrose University class project to help students understand not only what AI can do, but how to use it without undermining independent thinking.",
-        "The toolkit is now in a polished pre-interview-final stage. Research content, visuals, bibliography material, quiz behavior, badge workflow, and credits are represented. The main remaining dependency is the interview team\u2019s final videos, clips, and transcripts."
+        "The toolkit is now in a polished pre-interview-final stage. Research content, visuals, bibliography material, quiz behavior, badge workflow, and credits are represented. The main remaining dependency is the interview team’s final videos, clips, and transcripts."
       ],
       "visual": {
         "src": "assets/img/graphic-ai-thinking.png",
@@ -160,7 +160,7 @@
             "A responsible student does not have to avoid AI completely. The goal is to use AI in a way that supports learning, protects privacy, and keeps human judgment central."
           ],
           "actions": [
-            "Use AI to brainstorm, organize, explain, summarize, and study \u2014 not to replace your own thinking.",
+            "Use AI to brainstorm, organize, explain, summarize, and study — not to replace your own thinking.",
             "Read your syllabus and ask your instructor what AI use is allowed before submitting work.",
             "Verify AI answers with course materials, scholarly sources, or trusted references.",
             "Do not share private, financial, medical, identifying, or copyrighted information with AI tools unless you have clear permission and a safe reason.",
@@ -313,7 +313,7 @@
           "id": "copyright-data",
           "title": "Copyrighted Data and Submitted Information",
           "paragraphs": [
-            "AI raises copyright concerns because models may be trained on large collections of text, images, code, and media. Students also need to be careful about uploading copyrighted class materials, unpublished drafts, private notes, or someone else\u2019s work into AI tools without permission.",
+            "AI raises copyright concerns because models may be trained on large collections of text, images, code, and media. Students also need to be careful about uploading copyrighted class materials, unpublished drafts, private notes, or someone else’s work into AI tools without permission.",
             "A responsible approach is to use AI for general brainstorming and learning support while avoiding the upload of private, copyrighted, or restricted content unless the instructor, owner, or policy clearly allows it."
           ]
         }
@@ -501,7 +501,7 @@
         "If a user passes the quiz, the certification badge appears on the page and can be downloaded directly."
       ],
       "quizIntro": [
-        "Click the button below to open the quiz. Questions are randomized each time the site loads and are based on the toolkit\u2019s core ideas: responsible school use, privacy, job changes, source evaluation, human connection, and ethical judgment.",
+        "Click the button below to open the quiz. Questions are randomized each time the site loads and are based on the toolkit’s core ideas: responsible school use, privacy, job changes, source evaluation, human connection, and ethical judgment.",
         "After checking your score, correct answers are highlighted in green and incorrect selections are highlighted in red. A passing score unlocks the certification badge graphic and download option."
       ],
       "subsections": [
@@ -521,8 +521,7 @@
       "title": "10. Bibliography / Sources",
       "navTitle": "10. Bibliography",
       "summary": [
-        "This bibliography organizes the toolkit\u2019s supporting sources by topic area. Entries are alphabetized within each section and cleaned for consistent presentation.",
-        "A final librarian or instructor review is still recommended for citation style, link verification, and any remaining database-access formatting."
+        "This bibliography organizes the toolkit’s supporting sources by topic area. Entries are alphabetized within each section and cleaned for consistent presentation."
       ],
       "sourceGroups": [
         {
@@ -530,7 +529,7 @@
           "open": true,
           "sources": [
             "Copeland, B. J. (2026, April 2). History of artificial intelligence (AI). In Britannica.com encyclopedia. Retrieved April 13, 2026, from https://www.britannica.com/science/history-of-artificial-intelligence",
-            "De Leon, J., de Leon-Martinez, S., Art\u00e9s-Rodr\u00edguez, A., Baca-Garc\u00eda, E., & De las Cuevas, C. (2025). Reflections on the potential and risks of AI for scientific article writing after the AI endorsement by some scientific publishers: Focusing on Scopus AI. Actas Espa\u00f1olas de Psiquiatr\u00eda, 53(2), 433\u2013442. https://doi.org/10.62641/aep.v53i2.1849",
+            "De Leon, J., de Leon-Martinez, S., Artés-Rodríguez, A., Baca-García, E., & De las Cuevas, C. (2025). Reflections on the potential and risks of AI for scientific article writing after the AI endorsement by some scientific publishers: Focusing on Scopus AI. Actas Españolas de Psiquiatría, 53(2), 433–442. https://doi.org/10.62641/aep.v53i2.1849",
             "Lawrence Livermore National Laboratory. (n.d.). The birth of artificial intelligence (AI) research. U.S. Department of Energy. https://st.llnl.gov/news/look-back/birth-artificial-intelligence-ai-research",
             "Professor John McCarthy: Father of AI. (n.d.). What is AI? / Basic questions. Stanford University. Retrieved April 29, 2026, from http://jmc.stanford.edu/artificial-intelligence/what-is-ai/",
             "TED. (2024, April 22). What is an AI anyway? | Mustafa Suleyman | TED [Video]. YouTube. https://www.youtube.com/watch?v=KKNCiRWd_j0",
@@ -543,10 +542,10 @@
             "Bay Atlantic University. (2026, March 14). Innovative study habits for the digital age: Leveraging AI tools for students. https://bau.edu/blog/leveraging-ai-tools-for-education/",
             "Center for Teaching Excellence. (n.d.). Addressing bias in AI. University of Kansas. https://cte.ku.edu/addressing-bias-ai",
             "Chapman University. (n.d.). Bias in AI. https://www.chapman.edu/ai/bias-in-ai.aspx",
-            "Grose, T. K. (2023). Disruptive influence. ASEE Prism, 32(3), 14\u201317. https://www.jstor.org/stable/48734149",
-            "Mickle, T., Metz, C., Freedman, D., Terol, T. M., & Collins, K. (2026, April 7). How accurate are Google\u2019s A.I. overviews? The New York Times. https://www.nytimes.com/2026/04/07/technology/google-ai-overviews-accuracy.html",
+            "Grose, T. K. (2023). Disruptive influence. ASEE Prism, 32(3), 14–17. https://www.jstor.org/stable/48734149",
+            "Mickle, T., Metz, C., Freedman, D., Terol, T. M., & Collins, K. (2026, April 7). How accurate are Google’s A.I. overviews? The New York Times. https://www.nytimes.com/2026/04/07/technology/google-ai-overviews-accuracy.html",
             "Schwartz, S. (2025, February 14). Is it ethical to use AI to grade? Education Week. https://www.edweek.org/technology/is-it-ethical-to-use-ai-to-grade/2025/02",
-            "Silvestrone, S., & Rubman, J. (2024, May 9). AI-assisted grading: A magic wand or a Pandora\u2019s box? MIT Sloan Teaching & Learning Technologies. https://mitsloanedtech.mit.edu/2024/05/09/ai-assisted-grading-a-magic-wand-or-a-pandoras-box/",
+            "Silvestrone, S., & Rubman, J. (2024, May 9). AI-assisted grading: A magic wand or a Pandora’s box? MIT Sloan Teaching & Learning Technologies. https://mitsloanedtech.mit.edu/2024/05/09/ai-assisted-grading-a-magic-wand-or-a-pandoras-box/",
             "Stryker, C., & Kavlakoglu, E. (2024, August 9). What is artificial intelligence (AI)? IBM Think. https://www.ibm.com/think/topics/artificial-intelligence",
             "Tolsgaard, M. G., Pusic, M. V., Sebok-Syer, S. S., Gin, B., Svendsen, M. B., Syer, M. D., Brydges, R., Cuddy, M. M., & Boscardin, C. K. (2023). The fundamentals of artificial intelligence in medical education research: AMEE Guide No. 156. Medical Teacher, 45(6). https://doi.org/10.1080/0142159X.2023.2180340",
             "Torres-Diaz, J. C., Duart, J., Rivera, D., & Flandoli, A. B. (2025). Artificial intelligence and academic integrity: Exploring plagiarism in Ecuadorian universities. International Journal for Education Integrity, 21(35). https://doi.org/10.1007/s40979-025-00209-3",
@@ -564,14 +563,14 @@
             "Maslej, R. (Ed.). (2025). Artificial intelligence index report 2025. Stanford University Human-Centered Artificial Intelligence. https://hai.stanford.edu/assets/files/hai_ai_index_report_2025.pdf",
             "Morgan State University. (2023, November 21). Enhancing everyday life: How AI is revolutionizing your daily experience. https://www.morgan.edu/ceamls/news/enhancing-everyday-life-how-ai-is-revolutionizing-your-daily-experience",
             "Rastogi, R., Srivastava, N., Shukla, G., Sinha, S., & Kumar, S. (2026). Ethical and social implications of artificial intelligence. Indian Journal of Scientific Research, 16(2). http://doi.org/10.32606/ijsr.v16.i2.00017",
-            "Voicu, M. C., S\u00eerghi, N., Mircea, G., & Toth, D. M. M. (2026). Towards a sustainable and ethical integration of AI chatbots in higher education. Sustainability, 18(5), 2534. https://doi.org/10.3390/su18052534",
+            "Voicu, M. C., Sîrghi, N., Mircea, G., & Toth, D. M. M. (2026). Towards a sustainable and ethical integration of AI chatbots in higher education. Sustainability, 18(5), 2534. https://doi.org/10.3390/su18052534",
             "Ye, M., & Friginal, E. (2026). Engaging stakeholders, shaping AI ethics: Targeted engagement in corporate AI ethics statements. PLoS One, 21(3). https://doi.org/10.1371/journal.pone.0340796"
           ]
         },
         {
           "title": "AI Effects on the Job Market",
           "sources": [
-            "Azp\u00farua, A. E. (2026, February 20). Enhance or eliminate? How AI will likely change these jobs. Working Knowledge: Distilling Harvard Business School research for leaders who make a difference. https://www.library.hbs.edu/working-knowledge/enhance-or-eliminate-how-ai-will-likely-change-these-jobs",
+            "Azpúrua, A. E. (2026, February 20). Enhance or eliminate? How AI will likely change these jobs. Working Knowledge: Distilling Harvard Business School research for leaders who make a difference. https://www.library.hbs.edu/working-knowledge/enhance-or-eliminate-how-ai-will-likely-change-these-jobs",
             "Fitzgerald, J. (2025, June 24). Why soft skills still matter in the age of AI. Working Knowledge: Distilling Harvard Business School research for leaders who make a difference. https://www.library.hbs.edu/working-knowledge/why-soft-skills-still-matter-in-the-age-of-ai",
             "Krivkovich, A., & Madgavkar, A. (2026, January 6). Human skills will matter more than ever in the age of AI. McKinsey Global Institute. https://www.mckinsey.com/mgi/our-research/human-skills-will-matter-more-than-ever-in-the-age-of-ai",
             "Lacoviello, M. (2023, July 26). How does artificial intelligence create new jobs? Forbes. https://www.forbes.com/councils/forbesbusinesscouncil/2023/07/26/how-does-artificial-intelligence-create-new-jobs/",
@@ -583,13 +582,13 @@
         {
           "title": "Career Readiness, Meaningful Work, and Workforce Skills",
           "sources": [
-            "Bobitan, N., Dumitrescu, D., Popa, A. F., Sahlian, D. N., & Turlea, L. C. (2024). Shaping tomorrow: Anticipating skills requirements based on the integration of artificial intelligence in business organizations\u2014a foresight analysis using the scenario method. Electronics, 13(11), 2198. https://doi.org/10.3390/electronics13112198",
-            "Cope, B., Kalantzis, M., & Searsmith, D. (2021). Artificial intelligence for education: Knowledge and its assessment in AI-enabled learning ecologies. Educational Philosophy & Theory, 53(12), 1229\u20131245. https://doi.org/10.1080/00131857.2020.1728732",
-            "Covell, Y. (2026). Job applications: How to use AI and what to avoid: Artificial intelligence tools can cut down the work involved in applying for and securing a job, but what are the pitfalls? Cancer Nursing Practice, 25(2), 16\u201317. https://doi.org/10.7748/cnp.25.2.16.s8",
+            "Bobitan, N., Dumitrescu, D., Popa, A. F., Sahlian, D. N., & Turlea, L. C. (2024). Shaping tomorrow: Anticipating skills requirements based on the integration of artificial intelligence in business organizations—a foresight analysis using the scenario method. Electronics, 13(11), 2198. https://doi.org/10.3390/electronics13112198",
+            "Cope, B., Kalantzis, M., & Searsmith, D. (2021). Artificial intelligence for education: Knowledge and its assessment in AI-enabled learning ecologies. Educational Philosophy & Theory, 53(12), 1229–1245. https://doi.org/10.1080/00131857.2020.1728732",
+            "Covell, Y. (2026). Job applications: How to use AI and what to avoid: Artificial intelligence tools can cut down the work involved in applying for and securing a job, but what are the pitfalls? Cancer Nursing Practice, 25(2), 16–17. https://doi.org/10.7748/cnp.25.2.16.s8",
             "Faiyazuddin, M., Rahman, S. J. Q., Anand, G., Siddiqui, R. K., Mehta, R., Khatib, M. N., Gaidhane, S., Zahiruddin, Q. S., Hussain, A., & Sah, R. (2025). The impact of artificial intelligence on healthcare: A comprehensive review of advancements in diagnostics, treatment, and operational efficiency. Health Science Reports, 8(1). https://doi.org/10.1002/hsr2.70312",
             "Nica, E. (2023). Exploring the role of artificial intelligence in shaping and advancing workforce skills within manufacturing industries. Psychosociological Issues in Human Resource Management, 11(1). https://link.gale.com/apps/doc/A819097199/AONE?u=stambrose&sid=bookmark-AONE&xid=52b1d56f",
             "Przygoda, W., Rynio, A., & Kalisz, M. (2025). Artificial intelligence: A new challenge for human understanding, Christian education, and the pastoral activity of the churches. Religions, 16(8), 948. https://doi.org/10.3390/rel16080948",
-            "Tyssedal, J. J. (2023). Work is meaningful if there are good reasons to do it: A revisionary conceptual analysis of meaningful work. Journal of Business Ethics, 185(3), 533\u2013544. https://doi.org/10.1007/s10551-022-05205-y",
+            "Tyssedal, J. J. (2023). Work is meaningful if there are good reasons to do it: A revisionary conceptual analysis of meaningful work. Journal of Business Ethics, 185(3), 533–544. https://doi.org/10.1007/s10551-022-05205-y",
             "Vicsek, L., Bokor, T., & Pataki, G. (2022). Younger generations' expectations regarding artificial intelligence in the job market: Mapping accounts about the future relationship of automation and work. Journal of Sociology, 60(1). https://doi.org/10.1177/14407833221089365"
           ]
         },
@@ -598,17 +597,17 @@
           "sources": [
             "Eldredge, E. (2025, August 6). When sharing with AI, financial savvy still starts with human judgment. William & Mary Raymond A. Mason School of Business. https://mason.wm.edu/news/2025/when-sharing-with-ai-financial-savvy-still-starts-with-human-judgment.php",
             "Farm Bureau Financial Services. (2026, February 3). Should you trust AI with financial decisions? https://www.fbfs.com/learning-center/should-you-trust-ai-with-financial-decisions",
-            "Hogan, K. M., Olson, G. T., Mills, J. D., & Zaleski, P. A. (2023). An analysis of cyber breaches and effects on shareholder wealth. Business Source Premier, 30(1), 51\u201378. https://doi.org/10.1080/13571516.2023.2168994",
-            "Osakwe, J., & Haitula-Waiganjo, I. (2025). Data security and compliance through effective data governance. International Journal of Information Security, 4(1), 69\u201397. https://doi.org/10.34218/ijis_04_01_004",
-            "Silvestri, S., Islam, S., Amelin, D., Weiler, G., Papastergiou, S., & Ciampi, M. (2023). Cyber threat assessment and management for securing healthcare ecosystems using natural language processing. International Journal of Information Security, 23(1), 31\u201350. https://doi.org/10.1007/s10207-023-00769-w"
+            "Hogan, K. M., Olson, G. T., Mills, J. D., & Zaleski, P. A. (2023). An analysis of cyber breaches and effects on shareholder wealth. Business Source Premier, 30(1), 51–78. https://doi.org/10.1080/13571516.2023.2168994",
+            "Osakwe, J., & Haitula-Waiganjo, I. (2025). Data security and compliance through effective data governance. International Journal of Information Security, 4(1), 69–97. https://doi.org/10.34218/ijis_04_01_004",
+            "Silvestri, S., Islam, S., Amelin, D., Weiler, G., Papastergiou, S., & Ciampi, M. (2023). Cyber threat assessment and management for securing healthcare ecosystems using natural language processing. International Journal of Information Security, 23(1), 31–50. https://doi.org/10.1007/s10207-023-00769-w"
           ]
         },
         {
           "title": "Environmental Effects of AI",
           "sources": [
             "East Carolina University Libraries. (2026, January 30). Negative environmental impacts exacerbated by AI [LibGuide]. East Carolina University. https://libguides.ecu.edu/artificialintelligence",
-            "Girolimon, M. (2026, January 6). Understanding the environmental impact of artificial intelligence: AI has the potential to solve certain sustainability issues in the future, but the technology\u2019s environmental footprint also has consequences, from water depletion to carbon emissions, electronic waste and more. Southern New Hampshire University. https://www.snhu.edu/about-us/newsroom/stem/ai-environmental-impact",
-            "Zewe, A. (2025, January 17). Explained: Generative AI\u2019s environmental impact; rapid development and deployment of powerful generative AI models come with environmental consequences, including increased electricity demand and water consumption. MIT News. https://news.mit.edu/2025/explained-generative-ai-environmental-impact-0117"
+            "Girolimon, M. (2026, January 6). Understanding the environmental impact of artificial intelligence: AI has the potential to solve certain sustainability issues in the future, but the technology’s environmental footprint also has consequences, from water depletion to carbon emissions, electronic waste and more. Southern New Hampshire University. https://www.snhu.edu/about-us/newsroom/stem/ai-environmental-impact",
+            "Zewe, A. (2025, January 17). Explained: Generative AI’s environmental impact; rapid development and deployment of powerful generative AI models come with environmental consequences, including increased electricity demand and water consumption. MIT News. https://news.mit.edu/2025/explained-generative-ai-environmental-impact-0117"
           ]
         }
       ]
@@ -626,52 +625,52 @@
         {
           "title": "Development Team",
           "names": [
-            "Austin Engels \u2014 Lead Programmer, Site Architect, Deployment Lead, and Development Team Contributor",
-            "Kaylyn Miller \u2014 Development Team Member and Website Co-Developer",
-            "Piper Tuegel \u2014 Website Liaison and Development Team Member",
-            "Sarah Ward \u2014 Development Team Member and Website Co-Developer",
-            "Haley Sweatman \u2014 Development Team Member and Graphic Designer"
+            "Austin Engels — Lead Programmer, Site Architect, Deployment Lead, and Development Team Contributor",
+            "Kaylyn Miller — Development Team Member and Website Co-Developer",
+            "Piper Tuegel — Website Liaison and Development Team Member",
+            "Sarah Ward — Development Team Member and Website Co-Developer",
+            "Haley Sweatman — Development Team Member and Graphic Designer"
           ]
         },
         {
           "title": "Survey Team",
           "names": [
-            "Addy Heineke \u2014 Survey Team Member",
-            "Maya Hakes \u2014 Survey Team Member"
+            "Addy Heineke — Survey Team Member",
+            "Maya Hakes — Survey Team Member"
           ]
         },
         {
           "title": "Research Team",
           "names": [
-            "Carlos Huizar \u2014 Research Team Member",
-            "Lauren Bendall \u2014 Research Team Member",
-            "Julia Gardner \u2014 Research Team Member",
-            "Addy Heineke \u2014 Research Team Member",
-            "Maya Hakes \u2014 Research Team Member",
-            "Sam Labeda \u2014 Research Team Member",
-            "Dalton Koenig \u2014 Research Team Member"
+            "Carlos Huizar — Research Team Member",
+            "Lauren Bendall — Research Team Member",
+            "Julia Gardner — Research Team Member",
+            "Addy Heineke — Research Team Member",
+            "Maya Hakes — Research Team Member",
+            "Sam Labeda — Research Team Member",
+            "Dalton Koenig — Research Team Member"
           ]
         },
         {
           "title": "Interview Team",
           "names": [
-            "Julia Gardner \u2014 Interview Team Member",
-            "Nazaria Almanza-Gustafson \u2014 Interview Team Member",
-            "Addy Heineke \u2014 Interview Team Member",
-            "Maya Hakes \u2014 Interview Team Member",
-            "Sam Labeda \u2014 Interview Team Member"
+            "Julia Gardner — Interview Team Member",
+            "Nazaria Almanza-Gustafson — Interview Team Member",
+            "Addy Heineke — Interview Team Member",
+            "Maya Hakes — Interview Team Member",
+            "Sam Labeda — Interview Team Member"
           ]
         },
         {
           "title": "Bibliography",
           "names": [
-            "Nazaria Almanza-Gustafson \u2014 Bibliography Editor and Formatter"
+            "Nazaria Almanza-Gustafson — Bibliography Editor and Formatter"
           ]
         },
         {
           "title": "Class Scribe Team",
           "names": [
-            "Mike and AJ \u2014 Class notes and scribe support"
+            "Mike and AJ — Class notes and scribe support"
           ]
         }
       ],
