@@ -1,9 +1,9 @@
 {
   "_meta": {
     "project": "SAU AI Ethics Toolkit",
-    "status": "scope-complete preview build",
-    "note": "JSON does not support real comments. Editable notes are stored in this _meta object and in each section status field.",
-    "_comment": "Edit section text here. Keep ids stable so navigation links continue to work. JSON cannot use normal code comments."
+    "status": "final polished class-review build",
+    "audience": "St. Ambrose University students",
+    "note": "JSON does not support normal code comments. Edit section text carefully and keep section ids stable."
   },
   "quiz": {
     "passPercent": 80,
@@ -467,7 +467,7 @@
       "title": "8. Interviews",
       "navTitle": "8. Interviews",
       "summary": [
-        "The interview section is reserved for final interview videos, short clips, and transcript dropdowns. The interview team is still finalizing those materials, so this section stays as a clean placeholder for now.",
+        "The interview section is reserved for final interview videos, short clips, and transcript dropdowns. The interview team is still finalizing those materials, so this section remains as a clean placeholder for now.",
         "Once the final videos and transcripts are provided, this section can be updated without changing the rest of the toolkit."
       ],
       "interviews": [
@@ -674,7 +674,7 @@
           ]
         }
       ],
-      "footerNote": "Credits are based on the updated class credits file and should be reviewed one final time for spelling before publication."
+      "footerNote": "Credits are based on the updated class credits file and should receive one final spelling check before publication."
     }
   ]
 }

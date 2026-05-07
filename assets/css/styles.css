@@ -8,6 +8,8 @@
 */
 
 :root {
+  --glow-hue: 0deg;
+  --glow-boost: 1;
   --sau-blue: #003087;
   --sau-gold: #FFB81C;
   --sau-dark: #001f5a;
@@ -171,21 +173,32 @@ li { margin-bottom: 10px; }
 .subsection { padding-top: 6px; }
 
 /* Content boxes */
+/* These cards use a glowing left accent tab so topic colors pop without overwhelming the text. */
 .infobox, .note-box, .action-box, .warning-box {
   position: relative;
-  padding: 22px 22px 22px 26px;
+  padding: 22px 22px 22px 28px;
   margin: 22px 0;
   border-radius: 14px;
   overflow: hidden;
+  transition: transform 0.28s ease, box-shadow 0.28s ease, background-color 0.28s ease;
+}
+.infobox:hover, .note-box:hover, .action-box:hover, .warning-box:hover {
+  transform: translateY(-1px);
 }
 .infobox::before, .note-box::before, .action-box::before, .warning-box::before {
   content: "";
   position: absolute;
   left: 0;
-  top: 16px;
-  bottom: 16px;
-  width: 5px;
+  top: 14px;
+  bottom: 14px;
+  width: 6px;
   border-radius: 999px;
+  filter: hue-rotate(var(--glow-hue));
+  animation: accent-tab-pulse 3.2s ease-in-out infinite;
+}
+@keyframes accent-tab-pulse {
+  0%, 100% { opacity: 0.88; transform: scaleY(0.96); }
+  50% { opacity: 1; transform: scaleY(1.02); }
 }
 .infobox {
   background-color: var(--white);
@@ -194,7 +207,9 @@ li { margin-bottom: 10px; }
 }
 .infobox::before {
   background: var(--sau-gold);
-  box-shadow: 0 0 10px rgba(255, 184, 28, 0.34), 0 0 18px rgba(255, 184, 28, 0.18);
+  box-shadow:
+    0 0 calc(12px * var(--glow-boost)) rgba(255, 184, 28, 0.58),
+    0 0 calc(24px * var(--glow-boost)) rgba(255, 184, 28, 0.28);
 }
 .note-box {
   background-color: var(--sau-soft-gold);
@@ -202,7 +217,9 @@ li { margin-bottom: 10px; }
 }
 .note-box::before {
   background: var(--sau-blue);
-  box-shadow: 0 0 10px rgba(0, 48, 135, 0.28), 0 0 18px rgba(0, 48, 135, 0.14);
+  box-shadow:
+    0 0 calc(12px * var(--glow-boost)) rgba(0, 48, 135, 0.44),
+    0 0 calc(24px * var(--glow-boost)) rgba(0, 48, 135, 0.22);
 }
 .action-box {
   background-color: #eefaf3;
@@ -210,7 +227,9 @@ li { margin-bottom: 10px; }
 }
 .action-box::before {
   background: var(--success);
-  box-shadow: 0 0 10px rgba(30, 127, 79, 0.28), 0 0 18px rgba(30, 127, 79, 0.14);
+  box-shadow:
+    0 0 calc(12px * var(--glow-boost)) rgba(30, 127, 79, 0.46),
+    0 0 calc(24px * var(--glow-boost)) rgba(30, 127, 79, 0.24);
 }
 .warning-box {
   background-color: #fff3f0;
@@ -218,7 +237,9 @@ li { margin-bottom: 10px; }
 }
 .warning-box::before {
   background: var(--danger);
-  box-shadow: 0 0 10px rgba(179, 54, 34, 0.28), 0 0 18px rgba(179, 54, 34, 0.14);
+  box-shadow:
+    0 0 calc(12px * var(--glow-boost)) rgba(179, 54, 34, 0.46),
+    0 0 calc(24px * var(--glow-boost)) rgba(179, 54, 34, 0.24);
 }
 
 .card-grid {
@@ -272,54 +293,65 @@ summary { cursor: pointer; font-weight: 700; color: var(--sau-blue); }
 .quiz-option input { margin-right: 8px; }
 
 /* Quiz feedback animation: correct answers glow green, incorrect answers glow red. */
+/* Feedback glows are deliberately noticeable but not aggressive. */
 @keyframes neon-green-pulse {
   0%, 100% {
-    box-shadow: 0 0 0 rgba(0, 255, 136, 0), 0 0 8px rgba(0, 255, 136, 0.16);
+    box-shadow:
+      0 0 8px rgba(0, 255, 136, 0.26),
+      0 0 18px rgba(0, 255, 136, 0.18);
   }
   50% {
-    box-shadow: 0 0 0 rgba(0, 255, 136, 0), 0 0 14px rgba(0, 255, 136, 0.24);
+    box-shadow:
+      0 0 14px rgba(0, 255, 136, 0.56),
+      0 0 30px rgba(0, 255, 136, 0.30);
   }
 }
 
 @keyframes neon-red-pulse {
   0%, 100% {
-    box-shadow: 0 0 0 rgba(255, 42, 88, 0), 0 0 8px rgba(255, 42, 88, 0.16);
+    box-shadow:
+      0 0 8px rgba(255, 42, 88, 0.26),
+      0 0 18px rgba(255, 42, 88, 0.18);
   }
   50% {
-    box-shadow: 0 0 0 rgba(255, 42, 88, 0), 0 0 14px rgba(255, 42, 88, 0.24);
+    box-shadow:
+      0 0 14px rgba(255, 42, 88, 0.56),
+      0 0 30px rgba(255, 42, 88, 0.30);
   }
 }
 
 .question-correct {
-  border: 1.5px solid rgba(0, 255, 136, 0.75);
+  border: 1.5px solid rgba(0, 255, 136, 0.85);
   border-radius: 14px;
   padding: 10px 12px 12px;
   margin: 10px 0 14px;
-  background: rgba(0, 255, 136, 0.045);
-  animation: neon-green-pulse 2.2s ease-in-out infinite;
+  background: rgba(0, 255, 136, 0.06);
+  animation: neon-green-pulse 2s ease-in-out infinite;
 }
 
 .question-incorrect {
-  border: 1.5px solid rgba(255, 42, 88, 0.75);
+  border: 1.5px solid rgba(255, 42, 88, 0.85);
   border-radius: 14px;
   padding: 10px 12px 12px;
   margin: 10px 0 14px;
-  background: rgba(255, 42, 88, 0.045);
-  animation: neon-red-pulse 2.2s ease-in-out infinite;
+  background: rgba(255, 42, 88, 0.06);
+  animation: neon-red-pulse 2s ease-in-out infinite;
 }
 
 .option-correct {
-  background: rgba(0, 255, 136, 0.11);
-  border: 1px solid rgba(0, 255, 136, 0.8);
+  background: rgba(0, 255, 136, 0.14);
+  border: 1px solid rgba(0, 255, 136, 0.92);
   color: #064d2a;
   font-weight: 800;
+  animation: neon-green-pulse 2.4s ease-in-out infinite;
 }
 
 .option-incorrect {
-  background: rgba(255, 42, 88, 0.11);
-  border: 1px solid rgba(255, 42, 88, 0.8);
+  background: rgba(255, 42, 88, 0.14);
+  border: 1px solid rgba(255, 42, 88, 0.92);
   color: #7a1028;
   font-weight: 800;
+  animation: neon-red-pulse 2.4s ease-in-out infinite;
 }
 
 .button-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 18px; }
@@ -330,9 +362,32 @@ summary { cursor: pointer; font-weight: 700; color: var(--sau-blue); }
 .btn:hover { transform: translateY(-1px); box-shadow: 0 8px 16px rgba(0,0,0,0.12); }
 .btn-primary { background: var(--sau-blue); color: white; }
 .btn-secondary { background: var(--sau-gold); color: var(--sau-dark); }
-.quiz-result { margin-top: 18px; padding: 16px; border-radius: 12px; font-weight: 700; border: 1px solid transparent; }
-.quiz-result.pass { background: #e8f7ee; color: #155e37; border-color: rgba(30, 127, 79, 0.28); box-shadow: 0 0 12px rgba(30, 127, 79, 0.12); }
-.quiz-result.retry { background: #fff0e6; color: #7a3d00; border-color: rgba(154, 99, 0, 0.24); box-shadow: 0 0 12px rgba(154, 99, 0, 0.10); }
+.quiz-result {
+  margin-top: 18px;
+  padding: 16px;
+  border-radius: 12px;
+  font-weight: 700;
+  border: 1px solid transparent;
+  transition: box-shadow 0.28s ease, transform 0.28s ease;
+}
+.quiz-result.pass {
+  background: #e8f7ee;
+  color: #155e37;
+  border-color: rgba(0, 255, 136, 0.48);
+  box-shadow:
+    0 0 calc(10px * var(--glow-boost)) rgba(0, 255, 136, 0.24),
+    0 0 calc(20px * var(--glow-boost)) rgba(0, 255, 136, 0.12);
+  animation: neon-green-pulse 2.6s ease-in-out infinite;
+}
+.quiz-result.retry {
+  background: #fff0e6;
+  color: #7a3d00;
+  border-color: rgba(255, 184, 28, 0.48);
+  box-shadow:
+    0 0 calc(10px * var(--glow-boost)) rgba(255, 184, 28, 0.26),
+    0 0 calc(20px * var(--glow-boost)) rgba(255, 184, 28, 0.12);
+  animation: accent-tab-pulse 2.6s ease-in-out infinite;
+}
 
 .sources-list { columns: 1; list-style-position: outside; }
 .sources-list li { overflow-wrap: anywhere; font-size: 0.96rem; }
@@ -361,3 +416,46 @@ summary { cursor: pointer; font-weight: 700; color: var(--sau-blue); }
 
 /* Extra spacing for final credits and source lists. */
 .credits-note { color: var(--text-muted); font-size: 0.95rem; }
+
+/* section-title-glow-polish */
+/* Headings and cards get subtle polish so the site feels more alive for student users. */
+h2 {
+  filter: drop-shadow(0 2px 4px rgba(0, 48, 135, 0.08));
+}
+h2::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%;
+  margin-top: 6px;
+  border-radius: 999px;
+  background: var(--sau-gold);
+  box-shadow:
+    0 0 calc(9px * var(--glow-boost)) rgba(255, 184, 28, 0.50),
+    0 0 calc(18px * var(--glow-boost)) rgba(255, 184, 28, 0.24);
+  filter: hue-rotate(var(--glow-hue));
+  animation: accent-tab-pulse 3.4s ease-in-out infinite;
+}
+.content-section {
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.content-section:hover {
+  box-shadow: 0 14px 36px rgba(0, 31, 90, 0.13);
+}
+.card, .interview-card, .visual-card, details {
+  transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
+}
+.card:hover, .interview-card:hover, .visual-card:hover, details:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(0, 31, 90, 0.09);
+}
+
+/* Accessibility: reduce motion for users who prefer less animation. */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.001ms !important;
+  }
+}

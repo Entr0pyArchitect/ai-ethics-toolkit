@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     initializeNavigationBehavior();
     initializeMobileMenu();
     initializeBackToTop();
+    initializeScrollGlow();
     initializeQuiz(siteData.quiz);
   } catch (error) {
     renderLoadError(error);
@@ -374,6 +375,24 @@ function initializeBackToTop() {
   });
 
   button.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+}
+
+
+function initializeScrollGlow() {
+  // Smoothly adjusts hue and glow strength based on scroll depth.
+  // This keeps the site visually alive while still relying on CSS variables.
+  const updateGlow = () => {
+    const maxScroll = Math.max(document.documentElement.scrollHeight - window.innerHeight, 1);
+    const progress = Math.min(window.scrollY / maxScroll, 1);
+    const hueShift = Math.round(progress * 32);
+    const glowBoost = (1 + progress * 0.38).toFixed(2);
+
+    document.documentElement.style.setProperty("--glow-hue", `${hueShift}deg`);
+    document.documentElement.style.setProperty("--glow-boost", glowBoost);
+  };
+
+  updateGlow();
+  window.addEventListener("scroll", updateGlow, { passive: true });
 }
 
 function initializeQuiz(quizData) {
