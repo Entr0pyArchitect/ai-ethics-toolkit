@@ -17,6 +17,7 @@
 */
 
 const CONTENT_URL = "content/content.json";
+let activeQuizQuestions = [];
 
 document.addEventListener("DOMContentLoaded", async () => {
   try {
@@ -176,7 +177,7 @@ function renderInterviews(interviews) {
     card.appendChild(textElement("h3", interview.title || "Interview"));
     card.appendChild(textElement("p", interview.description || "Interview description pending."));
 
-    if (interview.videoUrl) {
+    if (interview.videoUrl && isSafeExternalURL(interview.videoUrl)) {
       const buttonRow = document.createElement("div");
       buttonRow.className = "button-row";
 
@@ -331,6 +332,16 @@ function renderCredits(groups) {
   return wrapper;
 }
 
+
+function isSafeExternalURL(value) {
+  try {
+    const parsed = new URL(value, window.location.href);
+    return parsed.protocol === "https:" || parsed.protocol === "http:";
+  } catch {
+    return false;
+  }
+}
+
 function initializeNavigationBehavior() {
   const dropdowns = document.getElementsByClassName("dropdown-btn");
 
@@ -369,10 +380,15 @@ function initializeQuiz(quizData) {
   const form = document.getElementById("knowledge-check-form");
   const quizPanel = document.getElementById("quiz-panel");
   const toggleButton = document.getElementById("quiz-toggle");
-  if (!form || !quizData || !quizPanel || !toggleButton) return;
-
   const questionList = document.getElementById("quiz-question-list");
-  renderQuizQuestions(questionList, quizData.questions || []);
+  if (!form || !quizData || !quizPanel || !toggleButton || !questionList) return;
+
+  // Shuffle question order on each load when enabled in content.json.
+  activeQuizQuestions = quizData.randomizeQuestions
+    ? shuffleArray(quizData.questions || [])
+    : [...(quizData.questions || [])];
+
+  renderQuizQuestions(questionList, activeQuizQuestions);
 
   toggleButton.addEventListener("click", () => {
     const isOpen = !quizPanel.classList.contains("open");
@@ -381,8 +397,9 @@ function initializeQuiz(quizData) {
 
   form.addEventListener("submit", (event) => {
     event.preventDefault();
-    const score = calculateQuizScore(quizData.questions || []);
-    showQuizResult(score, quizData.questions.length, quizData.passPercent || 80);
+    const score = calculateQuizScore(activeQuizQuestions);
+    showQuizResult(score, activeQuizQuestions.length, quizData.passPercent || 80);
+    markQuizAnswers(activeQuizQuestions);
     setQuizPanelOpen(quizPanel, toggleButton, true);
 
     const result = document.getElementById("quiz-result");
@@ -391,6 +408,7 @@ function initializeQuiz(quizData) {
 
   document.getElementById("reset-quiz")?.addEventListener("click", () => {
     form.reset();
+    clearQuizHighlights();
     const result = document.getElementById("quiz-result");
     const badge = document.getElementById("badge-preview");
     result.hidden = true;
@@ -419,6 +437,7 @@ function renderQuizQuestions(questionList, questions) {
   questions.forEach((question, index) => {
     const fieldset = document.createElement("fieldset");
     fieldset.className = "quiz-question";
+    fieldset.dataset.questionIndex = String(index);
 
     const legend = document.createElement("legend");
     legend.textContent = `${index + 1}. ${question.question}`;
@@ -427,6 +446,7 @@ function renderQuizQuestions(questionList, questions) {
     question.options.forEach((option, optionIndex) => {
       const label = document.createElement("label");
       label.className = "quiz-option";
+      label.dataset.optionIndex = String(optionIndex);
 
       const input = document.createElement("input");
       input.type = "radio";
@@ -449,6 +469,40 @@ function calculateQuizScore(questions) {
   }, 0);
 }
 
+function markQuizAnswers(questions) {
+  clearQuizHighlights();
+
+  questions.forEach((question, index) => {
+    const fieldset = document.querySelector(`.quiz-question[data-question-index="${index}"]`);
+    const selected = document.querySelector(`input[name="question-${index}"]:checked`);
+    const correctOption = fieldset?.querySelector(`.quiz-option[data-option-index="${question.correctIndex}"]`);
+    const selectedValue = selected ? Number(selected.value) : -1;
+    const answeredCorrectly = selectedValue === question.correctIndex;
+
+    if (!fieldset) return;
+
+    fieldset.classList.add(answeredCorrectly ? "question-correct" : "question-incorrect");
+
+    if (correctOption) {
+      correctOption.classList.add("option-correct");
+    }
+
+    if (!answeredCorrectly && selected) {
+      selected.closest(".quiz-option")?.classList.add("option-incorrect");
+    }
+  });
+}
+
+function clearQuizHighlights() {
+  document.querySelectorAll(".quiz-question").forEach((question) => {
+    question.classList.remove("question-correct", "question-incorrect");
+  });
+
+  document.querySelectorAll(".quiz-option").forEach((option) => {
+    option.classList.remove("option-correct", "option-incorrect");
+  });
+}
+
 function showQuizResult(score, total, passPercent) {
   const result = document.getElementById("quiz-result");
   const badge = document.getElementById("badge-preview");
@@ -459,9 +513,20 @@ function showQuizResult(score, total, passPercent) {
   result.className = `quiz-result ${passed ? "pass" : "retry"}`;
   result.textContent = passed
     ? `Score: ${score}/${total} (${percent}%). You passed the knowledge check.`
-    : `Score: ${score}/${total} (${percent}%). Review the toolkit and try again.`;
+    : `Score: ${score}/${total} (${percent}%). Review the highlighted questions and try again.`;
 
   badge.hidden = !passed;
+}
+
+function shuffleArray(items) {
+  const copy = [...items];
+
+  for (let i = copy.length - 1; i > 0; i--) {
+    const randomIndex = Math.floor(Math.random() * (i + 1));
+    [copy[i], copy[randomIndex]] = [copy[randomIndex], copy[i]];
+  }
+
+  return copy;
 }
 
 function renderDetails(title, body) {

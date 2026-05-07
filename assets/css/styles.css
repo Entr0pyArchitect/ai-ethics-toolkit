@@ -228,6 +228,56 @@ summary { cursor: pointer; font-weight: 700; color: var(--sau-blue); }
 }
 .quiz-option:hover { background: #edf3fb; }
 .quiz-option input { margin-right: 8px; }
+
+/* Quiz feedback animation: correct answers glow green, incorrect answers glow red. */
+@keyframes neon-green-pulse {
+  0%, 100% {
+    box-shadow: 0 0 8px rgba(0, 255, 136, 0.35), 0 0 16px rgba(0, 255, 136, 0.20);
+  }
+  50% {
+    box-shadow: 0 0 18px rgba(0, 255, 136, 0.95), 0 0 34px rgba(0, 255, 136, 0.60);
+  }
+}
+
+@keyframes neon-red-pulse {
+  0%, 100% {
+    box-shadow: 0 0 8px rgba(255, 42, 88, 0.35), 0 0 16px rgba(255, 42, 88, 0.20);
+  }
+  50% {
+    box-shadow: 0 0 18px rgba(255, 42, 88, 0.95), 0 0 34px rgba(255, 42, 88, 0.60);
+  }
+}
+
+.question-correct {
+  border: 2px solid #00ff88;
+  border-radius: 14px;
+  padding: 14px;
+  background: rgba(0, 255, 136, 0.06);
+  animation: neon-green-pulse 1.4s ease-in-out infinite;
+}
+
+.question-incorrect {
+  border: 2px solid #ff2a58;
+  border-radius: 14px;
+  padding: 14px;
+  background: rgba(255, 42, 88, 0.06);
+  animation: neon-red-pulse 1.4s ease-in-out infinite;
+}
+
+.option-correct {
+  background: rgba(0, 255, 136, 0.14);
+  border: 1px solid #00ff88;
+  color: #064d2a;
+  font-weight: 800;
+}
+
+.option-incorrect {
+  background: rgba(255, 42, 88, 0.14);
+  border: 1px solid #ff2a58;
+  color: #7a1028;
+  font-weight: 800;
+}
+
 .button-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 18px; }
 .btn {
   border: none; border-radius: 999px; padding: 12px 18px; font-weight: 800; cursor: pointer; text-decoration: none;
@@ -264,3 +314,6 @@ summary { cursor: pointer; font-weight: 700; color: var(--sau-blue); }
   .content-section { padding: 24px; }
   .visual-card { grid-template-columns: 1fr; }
 }
+
+/* Extra spacing for final credits and source lists. */
+.credits-note { color: var(--text-muted); font-size: 0.95rem; }
