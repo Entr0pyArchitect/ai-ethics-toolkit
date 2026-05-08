@@ -171,39 +171,87 @@ function renderCards(cards) {
 
 function renderInterviews(interviews) {
   const wrapper = document.createElement("div");
+  wrapper.className = "interview-grid";
 
   interviews.forEach((interview) => {
     const card = document.createElement("article");
     card.className = "interview-card";
+
     card.appendChild(textElement("h3", interview.title || "Interview"));
+
+    const meta = document.createElement("p");
+    meta.className = "interview-meta";
+    meta.textContent = [interview.interviewee, interview.role, interview.format].filter(Boolean).join(" • ");
+    card.appendChild(meta);
+
     card.appendChild(textElement("p", interview.description || "Interview description pending."));
 
-    if (interview.videoUrl && isSafeExternalURL(interview.videoUrl)) {
-      const buttonRow = document.createElement("div");
-      buttonRow.className = "button-row";
+    const mediaBlock = renderInterviewMedia(interview);
+    card.appendChild(mediaBlock);
 
-      const link = document.createElement("a");
-      link.className = "btn btn-primary";
-      link.href = interview.videoUrl;
-      link.target = "_blank";
-      link.rel = "noopener noreferrer";
-      link.textContent = "Open interview video";
+    card.appendChild(renderDetails("Transcript status", interview.transcriptStatus || "Transcript pending from the interview team."));
 
-      buttonRow.appendChild(link);
-      card.appendChild(buttonRow);
-    } else {
-      const placeholder = document.createElement("div");
-      placeholder.className = "embed-placeholder";
-      placeholder.appendChild(textElement("strong", interview.videoStatus || "Video embed pending"));
-      card.appendChild(placeholder);
-    }
-
-    card.appendChild(renderDetails("Transcript status", interview.transcriptStatus || "Transcript pending from the interview group."));
-    card.appendChild(renderDetails("Possible site use", interview.siteUse || "Use this interview to support the relevant toolkit section once content is finalized."));
     wrapper.appendChild(card);
   });
 
   return wrapper;
+}
+
+function renderInterviewMedia(interview) {
+  const mediaBlock = document.createElement("div");
+  mediaBlock.className = "interview-media";
+
+  if (interview.audioUrl) {
+    const audio = document.createElement("audio");
+    audio.controls = true;
+    audio.preload = "metadata";
+    audio.src = interview.audioUrl;
+    mediaBlock.appendChild(audio);
+    return mediaBlock;
+  }
+
+  if (interview.embedUrl && isSafeYouTubeEmbedURL(interview.embedUrl)) {
+    const iframe = document.createElement("iframe");
+    iframe.src = interview.embedUrl;
+    iframe.title = interview.title || "Interview video";
+    iframe.loading = "lazy";
+    iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+    iframe.allowFullscreen = true;
+    mediaBlock.appendChild(iframe);
+    return mediaBlock;
+  }
+
+  if (interview.watchUrl && isSafeExternalURL(interview.watchUrl)) {
+    const buttonRow = document.createElement("div");
+    buttonRow.className = "button-row";
+
+    const link = document.createElement("a");
+    link.className = "btn btn-primary";
+    link.href = interview.watchUrl;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    link.textContent = "Open interview video";
+
+    buttonRow.appendChild(link);
+    mediaBlock.appendChild(buttonRow);
+    return mediaBlock;
+  }
+
+  const placeholder = document.createElement("div");
+  placeholder.className = "embed-placeholder";
+  placeholder.appendChild(textElement("strong", interview.mediaStatus || "Interview media pending"));
+  mediaBlock.appendChild(placeholder);
+  return mediaBlock;
+}
+
+function isSafeYouTubeEmbedURL(value) {
+  try {
+    const parsed = new URL(value, window.location.href);
+    const allowedHosts = ["www.youtube.com", "youtube.com", "www.youtube-nocookie.com"];
+    return parsed.protocol === "https:" && allowedHosts.includes(parsed.hostname);
+  } catch {
+    return false;
+  }
 }
 
 function renderQuizArea(introParagraphs) {

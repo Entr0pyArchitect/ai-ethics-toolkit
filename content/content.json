@@ -467,16 +467,85 @@
       "title": "8. Interviews",
       "navTitle": "8. Interviews",
       "summary": [
-        "The interview section is reserved for final interview videos, short clips, and transcript dropdowns. The interview team is still finalizing those materials, so this section remains as a clean placeholder for now.",
-        "Once the final videos and transcripts are provided, this section can be updated without changing the rest of the toolkit."
+        "This section gathers interview perspectives from St. Ambrose University faculty, staff, and campus contributors on AI, student learning, critical thinking, and the future of work.",
+        "Some final video links and transcripts are still pending from the interview team. Available information has been added so the section can be completed as the remaining materials arrive."
       ],
       "interviews": [
         {
-          "title": "Interview Materials Pending",
-          "description": "Final interview videos, shortened clips, titles, interviewee names, and transcript text are still pending from the interview team.",
-          "videoStatus": "Video and transcript content pending",
+          "title": "The Future of AI in the Workforce | Dr. Bechen, PhD. Department of Education",
+          "interviewee": "Dr. Bechen, PhD",
+          "role": "Department of Education",
+          "format": "Video",
+          "mediaStatus": "YouTube/video link pending",
+          "description": "In this episode, we talk with SAU's Dr. Bechen about the future of AI in the education field. Not only its impact on college students, but teachers and students of all ages as well.",
           "transcriptStatus": "Transcript pending from the interview team.",
-          "siteUse": "Use dropdowns or expandable transcript blocks once final interview materials are provided."
+          "watchUrl": "",
+          "embedUrl": ""
+        },
+        {
+          "title": "The Future of AI in the Workforce | Kristin Enright, Marketing Department. St. Ambrose University",
+          "interviewee": "Kristin Enright",
+          "role": "Marketing Department, St. Ambrose University",
+          "format": "Video",
+          "mediaStatus": "YouTube/video link pending",
+          "description": "In this episode, we talk to adjunct professor Kristin Enright about the future of AI in the marketing workforce, as well as for marketing students.",
+          "transcriptStatus": "Transcript pending from the interview team.",
+          "watchUrl": "",
+          "embedUrl": ""
+        },
+        {
+          "title": "The Future of AI in the Workforce | Taylor Kilgus, Assistant Director of Success Programs",
+          "interviewee": "Taylor Kilgus",
+          "role": "Assistant Director of Success Programs",
+          "format": "Video",
+          "mediaStatus": "YouTube/video link pending",
+          "description": "In this episode, we talk to Taylor Kilgus from the student success center and her analysis of how AI can aid and deter student success in university.",
+          "transcriptStatus": "Transcript pending from the interview team.",
+          "watchUrl": "",
+          "embedUrl": ""
+        },
+        {
+          "title": "AI, Nursing, and Community Health | Ann Garton",
+          "interviewee": "Ann Garton",
+          "role": "SAU Nursing Professor and Community Health Coordinator",
+          "format": "Video",
+          "mediaStatus": "Video link pending",
+          "description": "Interview title and description are pending. Current role information: SAU Nursing Professor and Community Health Coordinator.",
+          "transcriptStatus": "Transcript pending from the interview team.",
+          "watchUrl": "",
+          "embedUrl": ""
+        },
+        {
+          "title": "AI, Research, and Student Learning | Allison Tollas",
+          "interviewee": "Allison Tollas",
+          "role": "Teaching Librarian",
+          "format": "Video",
+          "mediaStatus": "Video link pending",
+          "description": "Interview title and description are pending. Current role information: Teaching Librarian.",
+          "transcriptStatus": "Transcript pending from the interview team.",
+          "watchUrl": "",
+          "embedUrl": ""
+        },
+        {
+          "title": "Critical Thinking Interview | Coach Bernard",
+          "interviewee": "Coach Bernard",
+          "role": "Role/title pending",
+          "format": "Video",
+          "mediaStatus": "Video link pending",
+          "description": "Interview description pending from the interview team.",
+          "transcriptStatus": "Transcript pending from the interview team.",
+          "watchUrl": "",
+          "embedUrl": ""
+        },
+        {
+          "title": "Audio Interview | Dr. Samantha Dunn",
+          "interviewee": "Dr. Samantha Dunn",
+          "role": "Learning Team Director at St. Ambrose University | EdD, Teaching and Learning",
+          "format": "Audio",
+          "mediaStatus": "Audio available",
+          "description": "Audio interview with Dr. Samantha Dunn, Learning Team Director at St. Ambrose University. Description and transcript are pending final interview-team materials.",
+          "transcriptStatus": "Transcript pending from the interview team.",
+          "audioUrl": "assets/media/phil-interview-samantha-dunn.m4a"
         }
       ],
       "subsections": [
@@ -489,7 +558,7 @@
           ]
         }
       ],
-      "footerNote": "Interview videos, clips, titles, interviewee names, and transcripts are intentionally on hold until the interview team provides final materials."
+      "footerNote": "Interview transcripts are still pending and will be added after the interview team provides finalized text."
     },
     {
       "id": "quiz-badge",

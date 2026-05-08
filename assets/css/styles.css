@@ -459,3 +459,34 @@ h2::after {
     transition-duration: 0.001ms !important;
   }
 }
+
+
+/* Interview section media cards */
+.interview-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  margin-top: 22px;
+}
+
+.interview-meta {
+  color: var(--text-muted);
+  font-weight: 700;
+  margin-top: -6px;
+}
+
+.interview-media {
+  margin: 16px 0;
+}
+
+.interview-media audio {
+  width: 100%;
+}
+
+.interview-media iframe {
+  width: 100%;
+  min-height: 360px;
+  border: 0;
+  border-radius: 16px;
+  box-shadow: 0 10px 24px rgba(0, 31, 90, 0.12);
+}

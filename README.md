@@ -73,3 +73,16 @@ The `_headers` file adds Cloudflare Pages security headers, including a Content 
 ## Notes for future updates
 
 When the interview team provides final materials, update the `interviews` section in `content/content.json`. Add transcript text as expandable/dropdown content and keep the section student-readable rather than turning it into a long transcript dump.
+
+
+## Interview media workflow
+
+The interview section currently includes the known titles, descriptions, roles, and one provided audio file.
+
+For larger video files, prefer YouTube embeds or links rather than storing large video files directly in the repository. After each video is uploaded, update the matching interview entry in `content/content.json`:
+
+- `watchUrl`: the normal YouTube watch/share link
+- `embedUrl`: the YouTube embed URL, preferably from YouTube's Share > Embed option
+- `transcriptStatus`: replace the pending message when the transcript is ready
+
+The Dr. Samantha Dunn audio file is stored at `assets/media/phil-interview-samantha-dunn.m4a`.
