@@ -194,13 +194,23 @@ li { margin-bottom: 10px; }
   left: 0;
   top: 14px;
   bottom: 14px;
-  width: 6px;
+  width: 7px;
   border-radius: 999px;
   filter: hue-rotate(var(--glow-hue));
-  animation: accent-tab-pulse 2.8s ease-in-out infinite;
+  animation: accent-tab-pulse 2.45s ease-in-out infinite;
 }
 @keyframes accent-tab-pulse {
-  0%, 100% { opacity: 0.88; transform: scaleY(0.96); }
+  0%, 100% {
+    opacity: 0.88;
+    transform: scaleY(0.94);
+    filter: hue-rotate(var(--glow-hue)) brightness(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scaleY(1.04);
+    filter: hue-rotate(var(--glow-hue)) brightness(1.14);
+  }
+}
   50% { opacity: 1; transform: scaleY(1.02); }
 }
 .infobox {
@@ -211,8 +221,8 @@ li { margin-bottom: 10px; }
 .infobox::before {
   background: var(--sau-gold);
   box-shadow:
-    0 0 calc(15px * var(--glow-boost)) rgba(255, 184, 28, 0.58),
-    0 0 calc(30px * var(--glow-boost)) rgba(255, 184, 28, 0.28);
+    0 0 calc(17px * var(--glow-boost)) rgba(255, 184, 28, 0.68),
+    0 0 calc(36px * var(--glow-boost)) rgba(255, 184, 28, 0.34);
 }
 .note-box {
   background-color: var(--sau-soft-gold);
@@ -221,8 +231,8 @@ li { margin-bottom: 10px; }
 .note-box::before {
   background: var(--sau-blue);
   box-shadow:
-    0 0 calc(15px * var(--glow-boost)) rgba(0, 48, 135, 0.44),
-    0 0 calc(30px * var(--glow-boost)) rgba(0, 48, 135, 0.22);
+    0 0 calc(17px * var(--glow-boost)) rgba(0, 48, 135, 0.58),
+    0 0 calc(36px * var(--glow-boost)) rgba(0, 48, 135, 0.28);
 }
 .action-box {
   background-color: #eefaf3;
@@ -231,8 +241,8 @@ li { margin-bottom: 10px; }
 .action-box::before {
   background: var(--success);
   box-shadow:
-    0 0 calc(15px * var(--glow-boost)) rgba(30, 127, 79, 0.46),
-    0 0 calc(30px * var(--glow-boost)) rgba(30, 127, 79, 0.24);
+    0 0 calc(17px * var(--glow-boost)) rgba(30, 127, 79, 0.60),
+    0 0 calc(36px * var(--glow-boost)) rgba(30, 127, 79, 0.30);
 }
 .warning-box {
   background-color: #fff3f0;
@@ -241,8 +251,8 @@ li { margin-bottom: 10px; }
 .warning-box::before {
   background: var(--danger);
   box-shadow:
-    0 0 calc(15px * var(--glow-boost)) rgba(179, 54, 34, 0.46),
-    0 0 calc(30px * var(--glow-boost)) rgba(179, 54, 34, 0.24);
+    0 0 calc(17px * var(--glow-boost)) rgba(179, 54, 34, 0.62),
+    0 0 calc(36px * var(--glow-boost)) rgba(179, 54, 34, 0.30);
 }
 
 .card-grid {
@@ -575,4 +585,22 @@ h2::after {
 
 .transcript-block p:last-child {
   margin-bottom: 0;
+}
+
+
+/* final-tab-edge-glow */
+/* Subtle matching glow behind colored tabs; keeps the glow tied to the accent, not the whole card. */
+.infobox {
+  box-shadow:
+    0 4px 12px rgba(0,0,0,0.05),
+    -8px 0 18px rgba(255, 184, 28, 0.08);
+}
+.note-box {
+  box-shadow: -8px 0 18px rgba(0, 48, 135, 0.08);
+}
+.action-box {
+  box-shadow: -8px 0 18px rgba(30, 127, 79, 0.08);
+}
+.warning-box {
+  box-shadow: -8px 0 18px rgba(179, 54, 34, 0.08);
 }
