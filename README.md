@@ -95,13 +95,11 @@ Available and embedded:
 - Dr. Bechen
 - Kristin Enright
 - Ann Garton
+- Allison Tollas
 - Coach Bernard
 
 Available as local audio:
 - Dr. Samantha Dunn
-
-Link-only until final embed is available:
-- Allison Tollas
 
 Transcripts currently included:
 - Taylor Kilgus
