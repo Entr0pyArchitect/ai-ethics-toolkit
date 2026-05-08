@@ -263,13 +263,65 @@ function renderTranscriptDetails(title, transcript) {
   const summary = document.createElement("summary");
   summary.textContent = title;
 
-  const transcriptBox = document.createElement("pre");
+  const transcriptBox = document.createElement("div");
   transcriptBox.className = "transcript-text";
-  transcriptBox.textContent = transcript;
+
+  const blocks = parseTranscriptBlocks(transcript);
+
+  blocks.forEach((block) => {
+    const blockElement = document.createElement("section");
+    blockElement.className = "transcript-block";
+
+    if (block.timestamp) {
+      const time = document.createElement("span");
+      time.className = "transcript-time";
+      time.textContent = block.timestamp;
+      blockElement.appendChild(time);
+    }
+
+    block.paragraphs.forEach((paragraph) => {
+      const paragraphElement = document.createElement("p");
+      paragraphElement.textContent = paragraph;
+      blockElement.appendChild(paragraphElement);
+    });
+
+    transcriptBox.appendChild(blockElement);
+  });
 
   details.appendChild(summary);
   details.appendChild(transcriptBox);
   return details;
+}
+
+function parseTranscriptBlocks(transcript) {
+  // Transcripts are stored as plain text in content.json.
+  // This parser turns timestamped text into clean visual blocks without using raw HTML injection.
+  const text = transcript || "";
+  const timestampPattern = /\[([0-9:]+(?:[–-][0-9:]+)?)\]\s*/g;
+  const matches = [...text.matchAll(timestampPattern)];
+
+  if (matches.length === 0) {
+    return [{
+      timestamp: "",
+      paragraphs: splitTranscriptParagraphs(text)
+    }];
+  }
+
+  return matches.map((match, index) => {
+    const start = match.index + match[0].length;
+    const end = index + 1 < matches.length ? matches[index + 1].index : text.length;
+    return {
+      timestamp: match[1],
+      paragraphs: splitTranscriptParagraphs(text.slice(start, end))
+    };
+  }).filter((block) => block.paragraphs.length > 0);
+}
+
+function splitTranscriptParagraphs(text) {
+  return text
+    .split(/\n{2,}/)
+    .map((paragraph) => paragraph.replace(/\s+/g, " ").trim())
+    .filter(Boolean);
 }
 
 function isSafeYouTubeEmbedURL(value) {

@@ -296,65 +296,65 @@ summary { cursor: pointer; font-weight: 700; color: var(--sau-blue); }
 .quiz-option input { margin-right: 8px; }
 
 /* Quiz feedback animation: correct answers glow green, incorrect answers glow red. */
-/* Feedback glows are deliberately noticeable but not aggressive. */
+/* Final tuning keeps feedback visible while preventing glow overlap between questions. */
 @keyframes neon-green-pulse {
   0%, 100% {
     box-shadow:
-      0 0 8px rgba(0, 255, 136, 0.26),
-      0 0 18px rgba(0, 255, 136, 0.18);
+      0 0 5px rgba(0, 255, 136, 0.20),
+      0 0 11px rgba(0, 255, 136, 0.12);
   }
   50% {
     box-shadow:
-      0 0 16px rgba(0, 255, 136, 0.60),
-      0 0 30px rgba(0, 255, 136, 0.30);
+      0 0 9px rgba(0, 255, 136, 0.42),
+      0 0 18px rgba(0, 255, 136, 0.20);
   }
 }
 
 @keyframes neon-red-pulse {
   0%, 100% {
     box-shadow:
-      0 0 8px rgba(255, 42, 88, 0.26),
-      0 0 18px rgba(255, 42, 88, 0.18);
+      0 0 5px rgba(255, 42, 88, 0.20),
+      0 0 11px rgba(255, 42, 88, 0.12);
   }
   50% {
     box-shadow:
-      0 0 16px rgba(255, 42, 88, 0.60),
-      0 0 30px rgba(255, 42, 88, 0.30);
+      0 0 9px rgba(255, 42, 88, 0.42),
+      0 0 18px rgba(255, 42, 88, 0.20);
   }
 }
 
 .question-correct {
-  border: 1.5px solid rgba(0, 255, 136, 0.85);
+  border: 1.5px solid rgba(0, 255, 136, 0.78);
   border-radius: 14px;
   padding: 10px 12px 12px;
-  margin: 10px 0 14px;
-  background: rgba(0, 255, 136, 0.06);
-  animation: neon-green-pulse 1.7s ease-in-out infinite;
+  margin: 14px 0 28px;
+  background: rgba(0, 255, 136, 0.045);
+  animation: neon-green-pulse 2.05s ease-in-out infinite;
 }
 
 .question-incorrect {
-  border: 1.5px solid rgba(255, 42, 88, 0.85);
+  border: 1.5px solid rgba(255, 42, 88, 0.78);
   border-radius: 14px;
   padding: 10px 12px 12px;
-  margin: 10px 0 14px;
-  background: rgba(255, 42, 88, 0.06);
-  animation: neon-red-pulse 1.7s ease-in-out infinite;
+  margin: 14px 0 28px;
+  background: rgba(255, 42, 88, 0.045);
+  animation: neon-red-pulse 2.05s ease-in-out infinite;
 }
 
 .option-correct {
-  background: rgba(0, 255, 136, 0.14);
-  border: 1px solid rgba(0, 255, 136, 0.92);
+  background: rgba(0, 255, 136, 0.12);
+  border: 1px solid rgba(0, 255, 136, 0.86);
   color: #064d2a;
   font-weight: 800;
-  animation: neon-green-pulse 2.4s ease-in-out infinite;
+  animation: neon-green-pulse 2.35s ease-in-out infinite;
 }
 
 .option-incorrect {
-  background: rgba(255, 42, 88, 0.14);
-  border: 1px solid rgba(255, 42, 88, 0.92);
+  background: rgba(255, 42, 88, 0.12);
+  border: 1px solid rgba(255, 42, 88, 0.86);
   color: #7a1028;
   font-weight: 800;
-  animation: neon-red-pulse 2.4s ease-in-out infinite;
+  animation: neon-red-pulse 2.35s ease-in-out infinite;
 }
 
 .button-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 18px; }
@@ -505,16 +505,12 @@ h2::after {
 }
 
 .transcript-text {
-  white-space: pre-wrap;
-  max-height: 460px;
+  max-height: 500px;
   overflow: auto;
   padding: 18px;
   border-radius: 14px;
   background: #f8fbff;
   border: 1px solid var(--border-light);
-  font-family: Calibri, Arial, sans-serif;
-  font-size: 1rem;
-  line-height: 1.65;
   color: var(--text-dark);
   box-shadow: inset 0 0 18px rgba(0, 48, 135, 0.045);
 }
@@ -547,3 +543,36 @@ h2::after {
 .content-section[data-section-id="credits"] { --section-accent: #ffb81c; --section-accent-2: #003087; --section-glow: rgba(255, 184, 28, 0.55); }
 
 
+
+
+.transcript-block {
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(0, 48, 135, 0.10);
+}
+
+.transcript-block:last-child {
+  border-bottom: none;
+}
+
+.transcript-time {
+  display: inline-block;
+  margin-bottom: 8px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--sau-soft-gold);
+  color: var(--sau-blue);
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.transcript-block p {
+  margin: 0 0 8px;
+  font-family: Calibri, Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.68;
+}
+
+.transcript-block p:last-child {
+  margin-bottom: 0;
+}
