@@ -11,6 +11,7 @@
   --glow-hue: 0deg;
   --glow-boost: 1;
   --section-accent: var(--sau-gold);
+  --section-accent-2: var(--sau-blue);
   --section-glow: rgba(255, 184, 28, 0.46);
   --sau-blue: #003087;
   --sau-gold: #FFB81C;
@@ -304,7 +305,7 @@ summary { cursor: pointer; font-weight: 700; color: var(--sau-blue); }
   }
   50% {
     box-shadow:
-      0 0 14px rgba(0, 255, 136, 0.56),
+      0 0 16px rgba(0, 255, 136, 0.60),
       0 0 30px rgba(0, 255, 136, 0.30);
   }
 }
@@ -317,7 +318,7 @@ summary { cursor: pointer; font-weight: 700; color: var(--sau-blue); }
   }
   50% {
     box-shadow:
-      0 0 14px rgba(255, 42, 88, 0.56),
+      0 0 16px rgba(255, 42, 88, 0.60),
       0 0 30px rgba(255, 42, 88, 0.30);
   }
 }
@@ -328,7 +329,7 @@ summary { cursor: pointer; font-weight: 700; color: var(--sau-blue); }
   padding: 10px 12px 12px;
   margin: 10px 0 14px;
   background: rgba(0, 255, 136, 0.06);
-  animation: neon-green-pulse 1.8s ease-in-out infinite;
+  animation: neon-green-pulse 1.7s ease-in-out infinite;
 }
 
 .question-incorrect {
@@ -337,7 +338,7 @@ summary { cursor: pointer; font-weight: 700; color: var(--sau-blue); }
   padding: 10px 12px 12px;
   margin: 10px 0 14px;
   background: rgba(255, 42, 88, 0.06);
-  animation: neon-red-pulse 1.8s ease-in-out infinite;
+  animation: neon-red-pulse 1.7s ease-in-out infinite;
 }
 
 .option-correct {
@@ -427,16 +428,14 @@ h2 {
 h2::after {
   content: "";
   display: block;
-  height: 3px;
-  width: 100%;
-  margin-top: 6px;
+  height: 4px;
+  width: min(420px, 100%);
+  margin-top: 8px;
   border-radius: 999px;
-  background: var(--section-accent);
-  box-shadow:
-    0 0 calc(11px * var(--glow-boost)) var(--section-glow),
-    0 0 calc(30px * var(--glow-boost)) color-mix(in srgb, var(--section-accent) 30%, transparent);
+  background: linear-gradient(90deg, var(--section-accent), var(--section-accent-2));
+  box-shadow: 0 0 calc(14px * var(--glow-boost)) var(--section-glow);
   filter: hue-rotate(var(--glow-hue));
-  animation: accent-tab-pulse 2.8s ease-in-out infinite;
+  animation: accent-tab-pulse 2.6s ease-in-out infinite;
 }
 .content-section {
   transition: box-shadow 0.3s ease, transform 0.3s ease;
@@ -517,7 +516,7 @@ h2::after {
   font-size: 1rem;
   line-height: 1.65;
   color: var(--text-dark);
-  box-shadow: inset 0 0 18px rgba(0, 48, 135, 0.04);
+  box-shadow: inset 0 0 18px rgba(0, 48, 135, 0.045);
 }
 
 .transcript-text:focus {
@@ -533,16 +532,18 @@ h2::after {
 }
 
 
-/* Section-specific accent colors for heading underlines and glow personality. */
-.content-section[data-section-id="home"] { --section-accent: #ffb81c; --section-glow: rgba(255, 184, 28, 0.58); }
-.content-section[data-section-id="ai-basics"] { --section-accent: #00d4ff; --section-glow: rgba(0, 212, 255, 0.52); }
-.content-section[data-section-id="classroom-use"] { --section-accent: #00ff88; --section-glow: rgba(0, 255, 136, 0.50); }
-.content-section[data-section-id="privacy-data-copyright"] { --section-accent: #ff4d6d; --section-glow: rgba(255, 77, 109, 0.48); }
-.content-section[data-section-id="jobs-career"] { --section-accent: #b892ff; --section-glow: rgba(184, 146, 255, 0.50); }
-.content-section[data-section-id="outside-classroom"] { --section-accent: #ffb81c; --section-glow: rgba(255, 184, 28, 0.56); }
-.content-section[data-section-id="human-environment"] { --section-accent: #30d158; --section-glow: rgba(48, 209, 88, 0.48); }
-.content-section[data-section-id="future-implications"] { --section-accent: #64d2ff; --section-glow: rgba(100, 210, 255, 0.48); }
-.content-section[data-section-id="interviews"] { --section-accent: #ff9f0a; --section-glow: rgba(255, 159, 10, 0.52); }
-.content-section[data-section-id="quiz-badge"] { --section-accent: #00ff88; --section-glow: rgba(0, 255, 136, 0.52); }
-.content-section[data-section-id="bibliography"] { --section-accent: #5e7ce2; --section-glow: rgba(94, 124, 226, 0.48); }
-.content-section[data-section-id="credits"] { --section-accent: #ffb81c; --section-glow: rgba(255, 184, 28, 0.56); }
+/* Section-specific accent colors for title underlines only. */
+.content-section[data-section-id="home"] { --section-accent: #ffb81c; --section-accent-2: #003087; --section-glow: rgba(255, 184, 28, 0.60); }
+.content-section[data-section-id="ai-basics"] { --section-accent: #00c2ff; --section-accent-2: #003087; --section-glow: rgba(0, 194, 255, 0.48); }
+.content-section[data-section-id="classroom-use"] { --section-accent: #00d28a; --section-accent-2: #003087; --section-glow: rgba(0, 210, 138, 0.48); }
+.content-section[data-section-id="privacy-data-copyright"] { --section-accent: #ff6b6b; --section-accent-2: #003087; --section-glow: rgba(255, 107, 107, 0.45); }
+.content-section[data-section-id="jobs-career"] { --section-accent: #9b7cff; --section-accent-2: #003087; --section-glow: rgba(155, 124, 255, 0.48); }
+.content-section[data-section-id="outside-classroom"] { --section-accent: #ffb81c; --section-accent-2: #0057b8; --section-glow: rgba(255, 184, 28, 0.55); }
+.content-section[data-section-id="human-environment"] { --section-accent: #30d158; --section-accent-2: #003087; --section-glow: rgba(48, 209, 88, 0.48); }
+.content-section[data-section-id="future-implications"] { --section-accent: #64d2ff; --section-accent-2: #003087; --section-glow: rgba(100, 210, 255, 0.46); }
+.content-section[data-section-id="interviews"] { --section-accent: #ff9f0a; --section-accent-2: #003087; --section-glow: rgba(255, 159, 10, 0.54); }
+.content-section[data-section-id="quiz-badge"] { --section-accent: #00ff88; --section-accent-2: #003087; --section-glow: rgba(0, 255, 136, 0.52); }
+.content-section[data-section-id="bibliography"] { --section-accent: #5e7ce2; --section-accent-2: #003087; --section-glow: rgba(94, 124, 226, 0.46); }
+.content-section[data-section-id="credits"] { --section-accent: #ffb81c; --section-accent-2: #003087; --section-glow: rgba(255, 184, 28, 0.55); }
+
+
