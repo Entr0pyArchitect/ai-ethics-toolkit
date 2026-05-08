@@ -703,65 +703,65 @@
       "title": "11. Credits",
       "navTitle": "11. Credits",
       "summary": [
-        "This section recognizes the class teams that contributed to the AI Ethics Toolkit. Roles are grouped by team so viewers can see how research, development, survey work, bibliography work, interviews, and class documentation supported the final product."
+        "This section recognizes the class teams that contributed to the AI Ethics Toolkit. Roles are grouped by team so viewers can see how development, survey work, research, interviews, bibliography work, and class documentation supported the final product."
       ],
       "creditGroups": [
         {
+          "title": "Development Team",
+          "names": [
+            "Austin Engels — Lead Programmer, Site Architect, Deployment Lead, and Development Team Contributor",
+            "Kaylyn Miller — Development Team Member and Website Co-Developer",
+            "Piper Tuegel — Website Liaison and Development Team Member",
+            "Sarah Ward — Development Team Member and Website Co-Developer",
+            "Haley Sweatman — Development Team Member and Graphic Designer"
+          ]
+        },
+        {
           "title": "Survey Team",
           "names": [
-            "Addy Heineke — Member of Survey Team",
-            "Maya Hakes — Member of Survey Team"
+            "Addy Heineke — Survey Team Member",
+            "Maya Hakes — Survey Team Member"
           ]
         },
         {
           "title": "Research Team",
           "names": [
-            "Carlos Huizar — Member of Research Team",
-            "Lauren Bendall — Member of Research Team",
-            "Julia Gardner — Member of Research Team",
-            "Addy Heineke — Member of Research Team",
-            "Maya Hakes — Member of Research Team",
-            "Sam Labeda — Member of Research Team",
-            "Dalton Koenig — Member of Research Team",
-            "Colin O’Grady — Member of Research Team",
-            "Quentin Hart — Member of Research Team"
+            "Carlos Huizar — Research Team Member",
+            "Lauren Bendall — Research Team Member",
+            "Julia Gardner — Research Team Member",
+            "Addy Heineke — Research Team Member",
+            "Maya Hakes — Research Team Member",
+            "Sam Labeda — Research Team Member",
+            "Dalton Koenig — Research Team Member",
+            "Colin O’Grady — Research Team Member",
+            "Quentin Hart — Research Team Member"
           ]
         },
         {
           "title": "Interview Team",
           "names": [
-            "Julia Gardner — Member of Interview Team",
-            "Nazaria Almanza-Gustafson — Member of Interview Team",
-            "Addy Heineke — Member of Interview Team",
-            "Maya Hakes — Member of Interview Team",
-            "Sam Labeda — Member of Interview Team",
-            "Mikey Brow — Lead Interviewer and Scribe Team Member",
-            "AJ Holden — Lead Interviewer and Scribe Team Member",
-            "Ross Willerth — Member of Interview Group and Editor",
+            "Julia Gardner — Interview Team Member",
+            "Nazaria Almanza-Gustafson — Interview Team Member",
+            "Addy Heineke — Interview Team Member",
+            "Maya Hakes — Interview Team Member",
+            "Sam Labeda — Interview Team Member",
+            "Mikey Brow — Lead Interviewer and Interview Team Member",
+            "AJ Holden — Lead Interviewer and Interview Team Member",
+            "Ross Willerth — Interview Group Member and Editor",
             "Collin Jeffries — Interview Group Editor"
           ]
         },
         {
           "title": "Bibliography",
           "names": [
-            "Nazaria Almanza-Gustafson — Editor and Formatter of Bibliography"
+            "Nazaria Almanza-Gustafson — Bibliography Editor and Formatter"
           ]
         },
         {
           "title": "Class Scribe Team",
           "names": [
-            "Mikey Brow — Scribe Team Member and Lead Interviewer",
-            "AJ Holden — Scribe Team Member and Lead Interviewer"
-          ]
-        },
-        {
-          "title": "Formatting / Design / Development Team",
-          "names": [
-            "Austin Engels — Lead Programmer, Site Architect, Deployment Lead, and Development Team Contributor",
-            "Kaylyn Miller — Member of Formatting/Design Team and Co-Developer",
-            "Piper Tuegel — Website Liaison and Member of Formatting/Design Team",
-            "Sarah Ward — Member of Formatting/Design Team and Website Co-Developer",
-            "Haley Sweatman — Development Team Member and Graphic Designer"
+            "Mikey Brow — Scribe Team Member",
+            "AJ Holden — Scribe Team Member"
           ]
         }
       ],
