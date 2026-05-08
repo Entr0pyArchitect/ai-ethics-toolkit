@@ -33,14 +33,14 @@ Completed:
 - Quiz questions randomize on page load.
 - Correct and incorrect quiz answers are highlighted after scoring.
 - Passing quiz score reveals the certification badge and download option.
-- Interview videos/audio and transcripts are included.
-- Visual polish, neon accents, scroll-based glow changes, and reduced-motion accessibility support are included.
+- Visual polish, neon accents, smooth animations, and reduced-motion accessibility support are included.
 
 Pending:
-- Final class review of the complete site.
+- Final class review of the site.
+- Interview section final update after the interview group provides final videos, clips, titles, interviewee labels, and transcripts.
 
 Not currently complete:
-- No major build item remains incomplete for the current class-review scope.
+- Final interview media and transcript integration.
 
 ## What to edit
 
