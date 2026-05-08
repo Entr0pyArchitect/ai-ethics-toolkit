@@ -119,8 +119,8 @@
       "title": "Critical Thinking & AI Ethics Toolkit",
       "navTitle": "0. Home / Toolkit Overview",
       "summary": [
-        "This website is a student-facing resource guide about artificial intelligence, ethical use, privacy, career readiness, and responsible decision-making. It was built as a St. Ambrose University class project to help students understand not only what AI can do, but how to use it without undermining independent thinking.",
-        "The toolkit is now in a polished pre-interview-final stage. Research content, visuals, bibliography material, quiz behavior, badge workflow, and credits are represented. The main remaining dependency is the interview team’s final videos, clips, and transcripts."
+        "This website is a student-facing resource guide about artificial intelligence, ethical use, privacy, career readiness, and responsible decision-making.",
+        "Built as a St. Ambrose University class project, the toolkit helps students understand what AI can do, where its limits are, and how to use it responsibly without undermining independent thinking."
       ],
       "visual": {
         "src": "assets/img/graphic-ai-thinking.png",
@@ -147,7 +147,7 @@
         {
           "title": "Student Takeaway",
           "body": [
-            "Use this toolkit to understand AI as a support tool, protect your privacy, follow course expectations, and keep your own judgment at the center of your work."
+            "Use AI as a support tool, protect your privacy, follow course expectations, verify important claims, and keep your own judgment at the center of your work."
           ]
         }
       ],
