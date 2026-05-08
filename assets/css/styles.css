@@ -490,3 +490,33 @@ h2::after {
   border-radius: 16px;
   box-shadow: 0 10px 24px rgba(0, 31, 90, 0.12);
 }
+
+
+/* Interview transcript and video polish */
+.interview-status {
+  margin-top: 10px;
+  color: var(--text-muted);
+  font-weight: 700;
+}
+
+.transcript-details {
+  margin-top: 16px;
+}
+
+.transcript-text {
+  white-space: pre-wrap;
+  max-height: 420px;
+  overflow: auto;
+  padding: 16px;
+  border-radius: 12px;
+  background: #f8fbff;
+  border: 1px solid var(--border-light);
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: var(--text-dark);
+}
+
+.transcript-text:focus {
+  outline: 2px solid var(--sau-gold);
+}

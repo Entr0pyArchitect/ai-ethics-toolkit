@@ -86,3 +86,25 @@ For larger video files, prefer YouTube embeds or links rather than storing large
 - `transcriptStatus`: replace the pending message when the transcript is ready
 
 The Dr. Samantha Dunn audio file is stored at `assets/media/phil-interview-samantha-dunn.m4a`.
+
+
+## Current interview status
+
+Available and embedded:
+- Taylor Kilgus
+- Dr. Bechen
+- Kristin Enright
+- Coach Bernard
+
+Available as local audio:
+- Dr. Samantha Dunn
+
+Processing or link-only:
+- Ann Garton
+- Allison Tollas
+
+Transcripts currently included:
+- Taylor Kilgus
+- Dr. Bechen
+- Kristin Enright
+- Coach Bernard

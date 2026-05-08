@@ -189,7 +189,11 @@ function renderInterviews(interviews) {
     const mediaBlock = renderInterviewMedia(interview);
     card.appendChild(mediaBlock);
 
-    card.appendChild(renderDetails("Transcript status", interview.transcriptStatus || "Transcript pending from the interview team."));
+    if (interview.transcriptText) {
+      card.appendChild(renderTranscriptDetails("Transcript", interview.transcriptText));
+    } else {
+      card.appendChild(renderDetails("Transcript status", interview.transcriptStatus || "Transcript pending from the interview team."));
+    }
 
     wrapper.appendChild(card);
   });
@@ -230,10 +234,15 @@ function renderInterviewMedia(interview) {
     link.href = interview.watchUrl;
     link.target = "_blank";
     link.rel = "noopener noreferrer";
-    link.textContent = "Open interview video";
+    link.textContent = interview.mediaStatus === "Video processing on YouTube" ? "Open video link" : "Open interview video";
 
     buttonRow.appendChild(link);
     mediaBlock.appendChild(buttonRow);
+
+    if (interview.mediaStatus) {
+      mediaBlock.appendChild(textElement("p", interview.mediaStatus, "interview-status"));
+    }
+
     return mediaBlock;
   }
 
@@ -242,6 +251,22 @@ function renderInterviewMedia(interview) {
   placeholder.appendChild(textElement("strong", interview.mediaStatus || "Interview media pending"));
   mediaBlock.appendChild(placeholder);
   return mediaBlock;
+}
+
+function renderTranscriptDetails(title, transcript) {
+  const details = document.createElement("details");
+  details.className = "transcript-details";
+
+  const summary = document.createElement("summary");
+  summary.textContent = title;
+
+  const transcriptBox = document.createElement("pre");
+  transcriptBox.className = "transcript-text";
+  transcriptBox.textContent = transcript;
+
+  details.appendChild(summary);
+  details.appendChild(transcriptBox);
+  return details;
 }
 
 function isSafeYouTubeEmbedURL(value) {
