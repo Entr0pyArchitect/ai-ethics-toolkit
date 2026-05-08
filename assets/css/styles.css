@@ -11,7 +11,8 @@
   --glow-hue: 0deg;
   --glow-boost: 1;
   --section-accent: var(--sau-gold);
-  --section-glow: rgba(255, 184, 28, 0.46);
+  --section-accent-2: var(--sau-blue);
+  --section-glow: rgba(255, 184, 28, 0.58);
   --sau-blue: #003087;
   --sau-gold: #FFB81C;
   --sau-dark: #001f5a;
@@ -210,8 +211,8 @@ li { margin-bottom: 10px; }
 .infobox::before {
   background: var(--sau-gold);
   box-shadow:
-    0 0 calc(15px * var(--glow-boost)) rgba(255, 184, 28, 0.58),
-    0 0 calc(30px * var(--glow-boost)) rgba(255, 184, 28, 0.28);
+    0 0 calc(17px * var(--glow-boost)) rgba(255, 184, 28, 0.58),
+    0 0 calc(34px * var(--glow-boost)) rgba(255, 184, 28, 0.28);
 }
 .note-box {
   background-color: var(--sau-soft-gold);
@@ -220,8 +221,8 @@ li { margin-bottom: 10px; }
 .note-box::before {
   background: var(--sau-blue);
   box-shadow:
-    0 0 calc(15px * var(--glow-boost)) rgba(0, 48, 135, 0.44),
-    0 0 calc(30px * var(--glow-boost)) rgba(0, 48, 135, 0.22);
+    0 0 calc(17px * var(--glow-boost)) rgba(0, 48, 135, 0.44),
+    0 0 calc(34px * var(--glow-boost)) rgba(0, 48, 135, 0.22);
 }
 .action-box {
   background-color: #eefaf3;
@@ -230,8 +231,8 @@ li { margin-bottom: 10px; }
 .action-box::before {
   background: var(--success);
   box-shadow:
-    0 0 calc(15px * var(--glow-boost)) rgba(30, 127, 79, 0.46),
-    0 0 calc(30px * var(--glow-boost)) rgba(30, 127, 79, 0.24);
+    0 0 calc(17px * var(--glow-boost)) rgba(30, 127, 79, 0.46),
+    0 0 calc(34px * var(--glow-boost)) rgba(30, 127, 79, 0.24);
 }
 .warning-box {
   background-color: #fff3f0;
@@ -240,8 +241,8 @@ li { margin-bottom: 10px; }
 .warning-box::before {
   background: var(--danger);
   box-shadow:
-    0 0 calc(15px * var(--glow-boost)) rgba(179, 54, 34, 0.46),
-    0 0 calc(30px * var(--glow-boost)) rgba(179, 54, 34, 0.24);
+    0 0 calc(17px * var(--glow-boost)) rgba(179, 54, 34, 0.46),
+    0 0 calc(34px * var(--glow-boost)) rgba(179, 54, 34, 0.24);
 }
 
 .card-grid {
@@ -328,7 +329,7 @@ summary { cursor: pointer; font-weight: 700; color: var(--sau-blue); }
   padding: 10px 12px 12px;
   margin: 10px 0 14px;
   background: rgba(0, 255, 136, 0.06);
-  animation: neon-green-pulse 1.8s ease-in-out infinite;
+  animation: neon-green-pulse 1.65s ease-in-out infinite;
 }
 
 .question-incorrect {
@@ -337,7 +338,7 @@ summary { cursor: pointer; font-weight: 700; color: var(--sau-blue); }
   padding: 10px 12px 12px;
   margin: 10px 0 14px;
   background: rgba(255, 42, 88, 0.06);
-  animation: neon-red-pulse 1.8s ease-in-out infinite;
+  animation: neon-red-pulse 1.65s ease-in-out infinite;
 }
 
 .option-correct {
@@ -427,16 +428,16 @@ h2 {
 h2::after {
   content: "";
   display: block;
-  height: 3px;
-  width: 100%;
-  margin-top: 6px;
+  height: 4px;
+  width: clamp(190px, 38vw, 430px);
+  margin-top: 8px;
   border-radius: 999px;
-  background: var(--section-accent);
+  background: linear-gradient(90deg, var(--section-accent), var(--section-accent-2));
   box-shadow:
-    0 0 calc(11px * var(--glow-boost)) var(--section-glow),
-    0 0 calc(30px * var(--glow-boost)) color-mix(in srgb, var(--section-accent) 30%, transparent);
+    0 0 calc(14px * var(--glow-boost)) var(--section-glow),
+    0 0 calc(28px * var(--glow-boost)) rgba(0, 48, 135, 0.16);
   filter: hue-rotate(var(--glow-hue));
-  animation: accent-tab-pulse 2.8s ease-in-out infinite;
+  animation: accent-tab-pulse 2.45s ease-in-out infinite;
 }
 .content-section {
   transition: box-shadow 0.3s ease, transform 0.3s ease;
@@ -507,17 +508,19 @@ h2::after {
 
 .transcript-text {
   white-space: pre-wrap;
-  max-height: 460px;
+  max-height: 480px;
   overflow: auto;
-  padding: 18px;
+  padding: 20px;
   border-radius: 14px;
-  background: #f8fbff;
+  background: linear-gradient(180deg, #f8fbff 0%, #ffffff 100%);
   border: 1px solid var(--border-light);
   font-family: Calibri, Arial, sans-serif;
   font-size: 1rem;
-  line-height: 1.65;
+  line-height: 1.7;
   color: var(--text-dark);
-  box-shadow: inset 0 0 18px rgba(0, 48, 135, 0.04);
+  box-shadow:
+    inset 0 0 18px rgba(0, 48, 135, 0.045),
+    0 0 16px rgba(0, 48, 135, 0.06);
 }
 
 .transcript-text:focus {
@@ -534,15 +537,35 @@ h2::after {
 
 
 /* Section-specific accent colors for heading underlines and glow personality. */
-.content-section[data-section-id="home"] { --section-accent: #ffb81c; --section-glow: rgba(255, 184, 28, 0.58); }
-.content-section[data-section-id="ai-basics"] { --section-accent: #00d4ff; --section-glow: rgba(0, 212, 255, 0.52); }
-.content-section[data-section-id="classroom-use"] { --section-accent: #00ff88; --section-glow: rgba(0, 255, 136, 0.50); }
-.content-section[data-section-id="privacy-data-copyright"] { --section-accent: #ff4d6d; --section-glow: rgba(255, 77, 109, 0.48); }
-.content-section[data-section-id="jobs-career"] { --section-accent: #b892ff; --section-glow: rgba(184, 146, 255, 0.50); }
-.content-section[data-section-id="outside-classroom"] { --section-accent: #ffb81c; --section-glow: rgba(255, 184, 28, 0.56); }
-.content-section[data-section-id="human-environment"] { --section-accent: #30d158; --section-glow: rgba(48, 209, 88, 0.48); }
-.content-section[data-section-id="future-implications"] { --section-accent: #64d2ff; --section-glow: rgba(100, 210, 255, 0.48); }
-.content-section[data-section-id="interviews"] { --section-accent: #ff9f0a; --section-glow: rgba(255, 159, 10, 0.52); }
-.content-section[data-section-id="quiz-badge"] { --section-accent: #00ff88; --section-glow: rgba(0, 255, 136, 0.52); }
-.content-section[data-section-id="bibliography"] { --section-accent: #5e7ce2; --section-glow: rgba(94, 124, 226, 0.48); }
-.content-section[data-section-id="credits"] { --section-accent: #ffb81c; --section-glow: rgba(255, 184, 28, 0.56); }
+.content-section[data-section-id="home"] { --section-accent: #ffb81c; --section-accent-2: #003087; --section-glow: rgba(255, 184, 28, 0.66); }
+.content-section[data-section-id="ai-basics"] { --section-accent: #00d4ff; --section-accent-2: #003087; --section-glow: rgba(0, 212, 255, 0.58); }
+.content-section[data-section-id="classroom-use"] { --section-accent: #00d28a; --section-accent-2: #003087; --section-glow: rgba(0, 210, 138, 0.56); }
+.content-section[data-section-id="privacy-data-copyright"] { --section-accent: #ff6b6b; --section-accent-2: #003087; --section-glow: rgba(255, 107, 107, 0.54); }
+.content-section[data-section-id="jobs-career"] { --section-accent: #9b7cff; --section-accent-2: #003087; --section-glow: rgba(155, 124, 255, 0.56); }
+.content-section[data-section-id="outside-classroom"] { --section-accent: #ffb81c; --section-accent-2: #0057b8; --section-glow: rgba(255, 184, 28, 0.64); }
+.content-section[data-section-id="human-environment"] { --section-accent: #30d158; --section-accent-2: #003087; --section-glow: rgba(48, 209, 88, 0.56); }
+.content-section[data-section-id="future-implications"] { --section-accent: #64d2ff; --section-accent-2: #003087; --section-glow: rgba(100, 210, 255, 0.56); }
+.content-section[data-section-id="interviews"] { --section-accent: #ff9f0a; --section-accent-2: #003087; --section-glow: rgba(255, 159, 10, 0.60); }
+.content-section[data-section-id="quiz-badge"] { --section-accent: #00ff88; --section-accent-2: #003087; --section-glow: rgba(0, 255, 136, 0.58); }
+.content-section[data-section-id="bibliography"] { --section-accent: #5e7ce2; --section-accent-2: #003087; --section-glow: rgba(94, 124, 226, 0.56); }
+.content-section[data-section-id="credits"] { --section-accent: #ffb81c; --section-accent-2: #003087; --section-glow: rgba(255, 184, 28, 0.64); }
+
+/* final-page-glow-polish */
+/* Soft ambient glow layer that gives the white content area more visual depth without hurting readability. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 16% 8%, rgba(255, 184, 28, 0.16), transparent 30%),
+    radial-gradient(circle at 88% 18%, rgba(0, 212, 255, 0.14), transparent 28%),
+    radial-gradient(circle at 48% 92%, rgba(0, 255, 136, 0.08), transparent 28%);
+  filter: hue-rotate(var(--glow-hue));
+  opacity: 0.95;
+}
+.sidebar, .layout, .mobile-toggle, .back-to-top {
+  position: relative;
+  z-index: 1;
+}
