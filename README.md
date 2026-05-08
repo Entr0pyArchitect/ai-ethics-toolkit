@@ -94,17 +94,23 @@ Available and embedded:
 - Taylor Kilgus
 - Dr. Bechen
 - Kristin Enright
+- Ann Garton
 - Coach Bernard
 
 Available as local audio:
 - Dr. Samantha Dunn
 
-Processing or link-only:
-- Ann Garton
+Link-only until final embed is available:
 - Allison Tollas
 
 Transcripts currently included:
 - Taylor Kilgus
 - Dr. Bechen
 - Kristin Enright
+- Ann Garton
+- Allison Tollas
 - Coach Bernard
+- Dr. Samantha Dunn
+
+Transcript note:
+- Transcripts are auto-generated and lightly cleaned for readability. A final human review is recommended before treating them as official verbatim records.

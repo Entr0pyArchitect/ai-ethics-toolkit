@@ -190,6 +190,9 @@ function renderInterviews(interviews) {
     card.appendChild(mediaBlock);
 
     if (interview.transcriptText) {
+      if (interview.transcriptNote) {
+        card.appendChild(textElement("p", interview.transcriptNote, "transcript-note"));
+      }
       card.appendChild(renderTranscriptDetails("Transcript", interview.transcriptText));
     } else {
       card.appendChild(renderDetails("Transcript status", interview.transcriptStatus || "Transcript pending from the interview team."));
