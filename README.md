@@ -1,13 +1,50 @@
 # SAU AI Ethics Toolkit
 
-This repository contains the final class-review build of the **St. Ambrose University Critical Thinking & AI Ethics Toolkit**.
+The **SAU AI Ethics Toolkit** is a student-facing website created for a **St. Ambrose University PHIL 102 Critical Thinking** class project. The site helps students think critically about artificial intelligence by explaining responsible AI use, academic integrity, privacy, data security, career readiness, human connection, environmental impact, and ethical decision-making.
 
-The toolkit is designed for **St. Ambrose University students** and supports classroom conversations about responsible AI use, academic integrity, privacy, data security, career readiness, human-centered decision-making, and the social effects of artificial intelligence.
+The goal of the project is to turn class research, interviews, survey work, bibliography work, and web development into a practical resource that students and instructors can use when discussing AI in school, work, and everyday life.
 
 ## Live project
 
 - **Live site:** https://sau-ai-ethics-toolkit.pages.dev/
 - **Repository:** https://github.com/Entr0pyArchitect/ai-ethics-toolkit
+
+## What the website includes
+
+The toolkit includes:
+
+- Student-friendly explanations of AI basics and generative AI
+- Guidance for responsible AI use in the classroom
+- Privacy, data security, and copyright considerations
+- Career readiness information for an AI-shaped workforce
+- Discussion of human connection and environmental impacts
+- Interview perspectives from St. Ambrose University faculty, staff, and campus contributors
+- A topic-organized bibliography with supporting sources
+- A built-in knowledge check quiz
+- A downloadable completion badge after a passing quiz score
+
+The site is written as an educational class resource, not as an official university-wide AI policy. Students should still follow individual course syllabi, instructor expectations, and university guidance.
+
+## Security and validation report
+
+A security and deployment-readiness review is included in the `docs/` folder.
+
+```text
+docs/security_audit.md
+docs/VALIDATION_REPORT.md
+```
+
+The security report explains the site’s static architecture, deployment model, security controls, code-level review, remaining limitations, and final deployment-readiness posture.
+
+At a high level:
+
+- The site is static and has no backend, login system, database, file upload, comment system, or stored user input.
+- Site content is rendered from `content/content.json`.
+- JavaScript uses DOM creation and text rendering rather than raw HTML injection.
+- The project avoids common high-risk client-side patterns such as `eval`, `document.write`, inline event handlers, and `javascript:` URLs.
+- Cloudflare Pages security headers are included in `_headers`.
+- The quiz/badge feature is a learning check, not a tamper-proof official credential.
+- Interview transcripts are included as accessibility support and class documentation, not official verbatim records.
 
 ## Final project status
 
@@ -28,8 +65,7 @@ Completed:
 - Passing quiz score reveals the certification badge and download option.
 - Interview videos/audio and transcripts are included.
 - Visual polish, section accent colors, neon quiz feedback, transcript formatting, and reduced-motion accessibility support are included.
-- A security audit is included in `docs/security_audit.md`.
-- A final validation report is included in `docs/VALIDATION_REPORT.md`.
+- Security and validation documentation is included in `docs/`.
 
 Pending:
 
@@ -77,33 +113,6 @@ sau-ai-ethics-toolkit/
 - **Images or badge replacements:** `assets/img/`
 - **Local audio or media notes:** `assets/media/`
 - **Project documentation:** `docs/`
-
-## Security summary
-
-This is a static educational website. The current build avoids common high-risk client-side patterns:
-
-- no `eval`
-- no `document.write`
-- no raw HTML injection pattern
-- no inline event handlers
-- no `javascript:` URL usage
-- no external JavaScript libraries
-- no user accounts, database, login system, comment system, file upload, or stored user input
-- no exposed API keys or secrets
-
-The `_headers` file adds Cloudflare Pages security headers, including:
-
-- `Content-Security-Policy`
-- `X-Content-Type-Options`
-- `Referrer-Policy`
-- `X-Frame-Options`
-
-Detailed security and validation documentation is included at:
-
-```text
-docs/security_audit.md
-docs/VALIDATION_REPORT.md
-```
 
 ## Deployment workflow
 
@@ -170,8 +179,6 @@ Transcript note:
 
 ## Content and bibliography notes
 
-The toolkit is written as a student-facing educational resource, not as an official university-wide AI policy document. Students should still follow individual course syllabi, instructor expectations, and university guidance.
-
 The bibliography is organized by topic area so that the site content can be connected back to supporting research and source material. Before final presentation, the group should perform one final live-click review of bibliography entries and any instructor-requested citation formatting.
 
 ## Quiz and badge notes
@@ -181,18 +188,6 @@ The quiz is a learning check built into the static website. Questions are random
 Important limitation:
 
 - The quiz and badge are client-side and should be treated as an educational knowledge check, not as a tamper-proof official credential.
-
-## Documentation
-
-The `docs/` folder contains the final review documentation:
-
-```text
-docs/security_audit.md
-docs/VALIDATION_REPORT.md
-```
-
-- `security_audit.md` summarizes the static-site security posture, controls, limitations, and deployment readiness.
-- `VALIDATION_REPORT.md` summarizes the final source-file checks, content review, security scan, and remaining limitations.
 
 ## Maintenance checklist before future pushes
 
@@ -208,3 +203,9 @@ Before pushing future changes:
 8. Confirm credits are still accurate.
 9. Confirm `_headers` remains present and correctly formatted.
 10. Avoid adding unsafe patterns such as `eval`, `document.write`, inline event handlers, raw HTML injection, or unnecessary third-party scripts.
+
+## Recommended Git commit message
+
+```text
+Update README project overview and security report reference
+```
