@@ -208,9 +208,3 @@ Before pushing future changes:
 8. Confirm credits are still accurate.
 9. Confirm `_headers` remains present and correctly formatted.
 10. Avoid adding unsafe patterns such as `eval`, `document.write`, inline event handlers, raw HTML injection, or unnecessary third-party scripts.
-
-## Recommended Git commit message
-
-```text
-Update README for final Markdown documentation structure
-```
