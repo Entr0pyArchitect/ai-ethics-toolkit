@@ -4,9 +4,14 @@ This repository contains the final class-review build of the **St. Ambrose Unive
 
 The toolkit is designed for **St. Ambrose University students** and supports classroom conversations about responsible AI use, academic integrity, privacy, data security, career readiness, human-centered decision-making, and the social effects of artificial intelligence.
 
+## Live project
+
+- **Live site:** https://sau-ai-ethics-toolkit.pages.dev/
+- **Repository:** https://github.com/Entr0pyArchitect/ai-ethics-toolkit
+
 ## Final project status
 
-The website is complete for the current class-review and deployment scope.
+The website is complete for the current group/class-review and deployment scope.
 
 Completed:
 
@@ -23,8 +28,8 @@ Completed:
 - Passing quiz score reveals the certification badge and download option.
 - Interview videos/audio and transcripts are included.
 - Visual polish, section accent colors, neon quiz feedback, transcript formatting, and reduced-motion accessibility support are included.
-- A detailed security audit is included in `docs/security_audit.docx`.
-- A final validation report is included in `docs/VALIDATION_REPORT.txt`.
+- A security audit is included in `docs/security_audit.md`.
+- A final validation report is included in `docs/VALIDATION_REPORT.md`.
 
 Pending:
 
@@ -54,13 +59,12 @@ sau-ai-ethics-toolkit/
 │   │   └── main.js
 │   └── media/
 │       ├── phil-interview-samantha-dunn.m4a
-│       └── README-media.md
+│       └── README.md
 ├── content/
 │   └── content.json
 └── docs/
-    ├── Austin Engels_Final_Contribution_Report.docx
-    ├── security_audit.docx
-    └── VALIDATION_REPORT.txt
+    ├── security_audit.md
+    └── VALIDATION_REPORT.md
 ```
 
 ## What to edit
@@ -94,16 +98,11 @@ The `_headers` file adds Cloudflare Pages security headers, including:
 - `Referrer-Policy`
 - `X-Frame-Options`
 
-A detailed security audit is included at:
+Detailed security and validation documentation is included at:
 
 ```text
-docs/security_audit.docx
-```
-
-A final source validation report is included at:
-
-```text
-docs/VALIDATION_REPORT.txt
+docs/security_audit.md
+docs/VALIDATION_REPORT.md
 ```
 
 ## Deployment workflow
@@ -124,7 +123,7 @@ The interview section includes embedded YouTube videos, one local audio file, an
 For large interview videos, use YouTube embeds instead of storing large video files directly in the repository. After each video is uploaded, update the matching interview entry in `content/content.json`:
 
 - `watchUrl`: the normal YouTube watch/share link
-- `embedUrl`: the YouTube embed URL, preferably from YouTube's Share > Embed option
+- `embedUrl`: the YouTube embed URL, preferably from YouTube's **Share > Embed** option
 - `transcriptStatus`: whether the transcript is available or pending
 - `transcriptText`: cleaned transcript text for the dropdown section
 
@@ -137,7 +136,7 @@ assets/media/phil-interview-samantha-dunn.m4a
 Additional media guidance is stored at:
 
 ```text
-assets/media/README-media.md
+assets/media/README.md
 ```
 
 ## Current interview status
@@ -183,6 +182,18 @@ Important limitation:
 
 - The quiz and badge are client-side and should be treated as an educational knowledge check, not as a tamper-proof official credential.
 
+## Documentation
+
+The `docs/` folder contains the final review documentation:
+
+```text
+docs/security_audit.md
+docs/VALIDATION_REPORT.md
+```
+
+- `security_audit.md` summarizes the static-site security posture, controls, limitations, and deployment readiness.
+- `VALIDATION_REPORT.md` summarizes the final source-file checks, content review, security scan, and remaining limitations.
+
 ## Maintenance checklist before future pushes
 
 Before pushing future changes:
@@ -195,11 +206,11 @@ Before pushing future changes:
 6. Review transcripts for formatting or obvious transcription mistakes.
 7. Verify bibliography links and topic grouping.
 8. Confirm credits are still accurate.
-9. Confirm `_headers` remains present.
+9. Confirm `_headers` remains present and correctly formatted.
 10. Avoid adding unsafe patterns such as `eval`, `document.write`, inline event handlers, raw HTML injection, or unnecessary third-party scripts.
 
 ## Recommended Git commit message
 
 ```text
-Finalize source validation and documentation updates
+Update README for final Markdown documentation structure
 ```
