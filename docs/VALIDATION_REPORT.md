@@ -1,10 +1,9 @@
-SAU AI Ethics Toolkit — Final Validation Report
-=======================================================
+# SAU AI Ethics Toolkit — Final Validation Report
 
-Project:
+## Project
 St. Ambrose University Critical Thinking & AI Ethics Toolkit
 
-Validation scope:
+## Validation scope
 - index.html
 - content/content.json
 - assets/css/styles.css
@@ -13,7 +12,7 @@ Validation scope:
 - README.md
 - docs/security_audit.docx
 
-Source-file checks:
+## Source-file checks
 - 12 expected site sections are present.
 - Quiz has 10 randomized questions and an 80% passing threshold.
 - Bibliography has 50 sources and is alphabetized within topic groups.
@@ -25,7 +24,7 @@ Source-file checks:
 - Security scan found no eval, document.write, raw innerHTML pattern, inline handlers, javascript: URLs, insecure external scripts, or raw HTML insertion patterns.
 - External watch links are restricted to HTTPS YouTube-domain URLs.
 
-Content reliability and credibility review:
+## Content reliability and credibility review
 - The site is written as a student-facing educational toolkit, not as formal university policy.
 - The content consistently frames AI as a support tool rather than a replacement for learning, judgment, or responsibility.
 - The site warns about AI limitations, including bias, hallucinations, incomplete answers, overconfidence, and overreliance.
@@ -33,18 +32,18 @@ Content reliability and credibility review:
 - The bibliography contains 50 sources grouped by topic area and aligned with the site sections.
 - Interview transcripts are included as accessibility support and class documentation rather than official verbatim records.
 
-Security review:
+## Security review
 - The site is static and has no backend, database, login system, account system, comment system, file upload, or stored user input.
 - JavaScript uses DOM creation and text rendering rather than raw HTML injection.
 - YouTube watch links are restricted to HTTPS YouTube-domain URLs.
 - No exposed API keys, passwords, tokens, or secrets were identified in the reviewed files.
 - Cloudflare Pages security headers should remain in the root _headers file.
 
-Remaining limitations:
+## Remaining limitations
 - The quiz and badge workflow is client-side and should be treated as a learning check, not a tamper-proof credential.
 - Unlisted YouTube videos can be viewed by anyone with the link.
 - Auto-generated transcripts should be reviewed by humans before being treated as official verbatim records.
 - A final group/class walkthrough is still recommended before presentation.
 
-Final result:
-PASS — Ready for group review, GitHub push, and Cloudflare Pages redeployment for the current class-project scope.
+## Final result
+**PASS — Ready for group review, GitHub push, and Cloudflare Pages redeployment for the current class-project scope.**
