@@ -465,7 +465,8 @@ function renderCredits(groups) {
 function isSafeExternalURL(value) {
   try {
     const parsed = new URL(value, window.location.href);
-    return parsed.protocol === "https:" || parsed.protocol === "http:";
+    const allowedHosts = ["www.youtube.com", "youtube.com", "youtu.be", "www.youtube-nocookie.com"];
+    return parsed.protocol === "https:" && allowedHosts.includes(parsed.hostname);
   } catch {
     return false;
   }
@@ -705,13 +706,14 @@ function textElement(tag, text, className = "") {
 }
 
 function renderLoadError(error) {
+  console.error("Toolkit content failed to load:", error);
+
   const root = document.getElementById("content-root");
   root.textContent = "";
 
   const section = document.createElement("section");
   section.className = "content-section warning-box";
   section.appendChild(textElement("h2", "Content failed to load"));
-  section.appendChild(textElement("p", "The site could not load its content file. Use the live Cloudflare Pages deployment or check that content/content.json exists in the project."));
-  section.appendChild(textElement("p", `Error: ${error.message}`));
+  section.appendChild(textElement("p", "The site could not load the toolkit content. Please refresh the page or contact the project maintainer."));
   root.appendChild(section);
 }

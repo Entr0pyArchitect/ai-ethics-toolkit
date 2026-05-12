@@ -1,9 +1,7 @@
 {
   "_meta": {
     "project": "SAU AI Ethics Toolkit",
-    "status": "final polished class-review build",
-    "audience": "St. Ambrose University students",
-    "note": "JSON does not support normal code comments. Edit section text carefully and keep section ids stable."
+    "audience": "St. Ambrose University students"
   },
   "quiz": {
     "passPercent": 80,
@@ -128,7 +126,7 @@
         "title": "How to use this toolkit",
         "paragraphs": [
           "Read each section as practical guidance rather than as a long research paper. Each topic explains what students should know, what risks to watch for, and what actions they can take.",
-          "The quiz and certification section is built directly into the site so the group can review the workflow before the final release. Passing users can unlock the certification badge and download it."
+          "The quiz and certification section lets students review the toolkit’s main ideas. A passing score unlocks the certification badge and download option."
         ]
       },
       "cards": [
@@ -582,8 +580,8 @@
       "title": "9. Quiz & Certification Badge",
       "navTitle": "9. Quiz & Certification",
       "summary": [
-        "This section contains a short in-site knowledge check designed to reinforce the toolkit's key ideas. It is a lightweight review build, but it works as a complete self-contained quiz.",
-        "If a user passes the quiz, the certification badge appears on the page and can be downloaded directly."
+        "This section contains a short in-site knowledge check designed to reinforce the toolkit's key ideas.",
+        "After checking the score, correct answers are highlighted in green and incorrect selections are highlighted in red. A passing score unlocks the certification badge graphic and download option."
       ],
       "quizIntro": [
         "Click the button below to open the quiz. Questions are randomized each time the site loads and are based on the toolkit’s core ideas: responsible school use, privacy, job changes, source evaluation, human connection, and ethical judgment.",

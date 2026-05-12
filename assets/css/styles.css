@@ -211,8 +211,6 @@ li { margin-bottom: 10px; }
     filter: hue-rotate(var(--glow-hue)) brightness(1.20);
   }
 }
-  50% { opacity: 1; transform: scaleY(1.02); }
-}
 .infobox {
   background-color: var(--white);
   border-left: none;

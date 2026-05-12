@@ -1,0 +1,20 @@
+SAU AI Ethics Toolkit — Final Source File Regeneration Validation
+====================================================================
+
+Scope:
+- Regenerated index.html, content/content.json, assets/css/styles.css, and assets/js/main.js.
+- Preserved site content and functionality except for removing public-facing internal notes and fixing syntax/security issues.
+
+Checks:
+- HTML: PASS — structure present and no HTML comments remain in index.html.
+- JSON: PASS — parses successfully, 12 sections present, 10 randomized quiz questions present.
+- Bibliography: PASS — 50 sources present and alphabetized within topic groups.
+- Interviews: PASS — 7 interviews, 6 embedded videos, 1 audio interview, and 7 transcripts present.
+- Credits: PASS — latest provided names are present in grouped credits.
+- Public-facing text: PASS — known dev/personal/internal notes removed from rendered site content.
+- CSS: PASS — brace balance valid and stray keyframe fragment removed.
+- JavaScript: PASS — node --check completed successfully.
+- Security scan: PASS — no eval, document.write, innerHTML, inline handlers, javascript: URLs, insecure external scripts, or raw HTML insertion patterns.
+- JavaScript hardening: PASS — external watch URLs are restricted to HTTPS YouTube domains and load diagnostics stay in console.
+
+Result: PASS — these files are ready to replace the corresponding project files before documentation review.
