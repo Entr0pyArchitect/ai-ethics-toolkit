@@ -1,12 +1,45 @@
-# Media folder
+# Media Folder
 
-The Dr. Samantha Dunn audio file is included here.
+This folder stores local media files used by the SAU AI Ethics Toolkit.
 
-For the larger interview videos, do not add files over Cloudflare Pages' per-asset limit.
-Recommended workflow:
-1. Upload videos to YouTube as unlisted or public.
-2. Copy each video's Share URL or embed URL.
-3. Update the matching interview entry in content/content.json.
-4. Keep transcripts in content/content.json once finalized.
+## Current local media
 
-If a video file is under the hosting limit and the class wants local hosting, place it here and reference it from content/content.json.
+```text
+assets/media/phil-interview-samantha-dunn.m4a
+```
+
+This audio file is referenced from `content/content.json` and is used for the Dr. Samantha Dunn interview entry.
+
+## Large interview videos
+
+Large interview videos should not be committed directly to this repository unless the file size is safely below the hosting limit and the group intentionally wants local hosting.
+
+Recommended workflow for larger videos:
+
+1. Upload the video to YouTube as **unlisted** or public, depending on the class decision.
+2. Copy the video watch/share URL.
+3. Copy the YouTube embed URL.
+4. Update the matching interview entry in `content/content.json`.
+5. Keep the transcript text in `content/content.json` once it is reviewed and cleaned.
+
+## Privacy and access note
+
+Unlisted YouTube videos do not appear publicly on the channel page in the same way as public videos, but anyone with the link can view them. Do not treat unlisted links as private or confidential.
+
+## Safe editing notes
+
+When updating media references:
+
+- Use HTTPS links only.
+- Prefer `youtube-nocookie.com` embed URLs when possible.
+- Do not add API keys, account tokens, passwords, or private links.
+- Do not add oversized video files without checking Cloudflare Pages and repository limits.
+- After editing media entries, test the live site to confirm the video/audio loads correctly.
+
+## Related files
+
+```text
+content/content.json       # Interview metadata, watch URLs, embed URLs, transcripts
+assets/js/main.js          # Media rendering and URL validation logic
+docs/security_audit.docx   # Security notes and deployment-readiness review
+```

@@ -1,16 +1,17 @@
 # SAU AI Ethics Toolkit
 
-This repository contains the polished class-review build of the **St. Ambrose University Critical Thinking & AI Ethics Toolkit**.
+This repository contains the final class-review build of the **St. Ambrose University Critical Thinking & AI Ethics Toolkit**.
 
-The toolkit is designed for **St. Ambrose University students** and supports classroom conversations about responsible AI use, academic integrity, privacy, data security, career readiness, and human-centered decision-making.
+The toolkit is designed for **St. Ambrose University students** and supports classroom conversations about responsible AI use, academic integrity, privacy, data security, career readiness, human-centered decision-making, and the social effects of artificial intelligence.
 
 ## Final project status
 
-The website is complete for class-review and deployment scope.
+The website is complete for the current class-review and deployment scope.
 
 Completed:
+
 - Static site structure is complete.
-- HTML, CSS, JavaScript, JSON, media, image assets, and documentation are organized into separate folders.
+- HTML, CSS, JavaScript, JSON, image assets, media assets, and documentation are organized into separate folders.
 - Cloudflare Pages security headers are included in `_headers`.
 - HTTPS deployment is handled by Cloudflare Pages.
 - Student-facing sections are organized, polished, and readable.
@@ -21,12 +22,14 @@ Completed:
 - Correct and incorrect quiz answers are highlighted after scoring.
 - Passing quiz score reveals the certification badge and download option.
 - Interview videos/audio and transcripts are included.
-- Visual polish, section accent colors, neon feedback, and reduced-motion accessibility support are included.
+- Visual polish, section accent colors, neon quiz feedback, transcript formatting, and reduced-motion accessibility support are included.
 - A detailed security audit is included in `docs/security_audit.docx`.
+- A final validation report is included in `docs/VALIDATION_REPORT.txt`.
 
 Pending:
-- Final class review of the complete site.
-- Any instructor-requested content or citation edits after review.
+
+- Final group/class review of the complete site.
+- Any instructor-requested content, citation, or wording edits after review.
 
 ## Project structure
 
@@ -34,13 +37,13 @@ Pending:
 sau-ai-ethics-toolkit/
 ├── .gitattributes
 ├── favicon.ico
-├── index.html                # Main HTML shell and page structure
-├── README.md                 # Project guide and maintenance notes
-├── _headers                  # Cloudflare Pages security headers
+├── index.html
+├── README.md
+├── _headers
 ├── assets/
 │   ├── css/
-│   │   └── styles.css        # Visual design, layout, animations, responsive styling
-│   ├── img/                  # Images, icons, graphics, and badge assets
+│   │   └── styles.css
+│   ├── img/
 │   │   ├── accept.gif
 │   │   ├── certification-badge.png
 │   │   ├── graphic-ai-impacts.png
@@ -48,15 +51,16 @@ sau-ai-ethics-toolkit/
 │   │   ├── sau-shield.png
 │   │   └── updated-badge.png
 │   ├── js/
-│   │   └── main.js           # Content rendering, navigation, quiz behavior, transcript rendering
+│   │   └── main.js
 │   └── media/
 │       ├── phil-interview-samantha-dunn.m4a
-│       └── README.md         # Media-specific notes
+│       └── README-media.md
 ├── content/
-│   └── content.json          # Main editable site content, bibliography, quiz, credits, interviews
+│   └── content.json
 └── docs/
     ├── Austin Engels_Final_Contribution_Report.docx
-    └── security_audit.docx   # Detailed final security audit and deployment-readiness notes
+    ├── security_audit.docx
+    └── VALIDATION_REPORT.txt
 ```
 
 ## What to edit
@@ -76,8 +80,8 @@ This is a static educational website. The current build avoids common high-risk 
 
 - no `eval`
 - no `document.write`
-- no inline event handlers
 - no raw HTML injection pattern
+- no inline event handlers
 - no `javascript:` URL usage
 - no external JavaScript libraries
 - no user accounts, database, login system, comment system, file upload, or stored user input
@@ -96,15 +100,22 @@ A detailed security audit is included at:
 docs/security_audit.docx
 ```
 
+A final source validation report is included at:
+
+```text
+docs/VALIDATION_REPORT.txt
+```
+
 ## Deployment workflow
 
 1. Review the files locally.
 2. Confirm `content/content.json` is valid JSON after edits.
-3. Commit changes in GitHub Desktop.
-4. Push to GitHub.
-5. Cloudflare Pages should redeploy automatically.
-6. Open the live HTTPS Cloudflare Pages URL.
-7. Verify navigation, quiz, badge download, interviews, transcripts, bibliography, and credits.
+3. Confirm `assets/js/main.js` has no browser console errors.
+4. Commit changes in GitHub Desktop.
+5. Push to GitHub.
+6. Cloudflare Pages should redeploy automatically.
+7. Open the live HTTPS Cloudflare Pages URL.
+8. Verify navigation, quiz behavior, badge download, interviews, transcripts, bibliography, and credits.
 
 ## Interview media workflow
 
@@ -123,9 +134,16 @@ The Dr. Samantha Dunn audio file is stored at:
 assets/media/phil-interview-samantha-dunn.m4a
 ```
 
+Additional media guidance is stored at:
+
+```text
+assets/media/README-media.md
+```
+
 ## Current interview status
 
 Available and embedded:
+
 - Taylor Kilgus
 - Dr. Bechen
 - Kristin Enright
@@ -134,9 +152,11 @@ Available and embedded:
 - Coach Bernard
 
 Available as local audio:
+
 - Dr. Samantha Dunn
 
 Transcripts currently included:
+
 - Taylor Kilgus
 - Dr. Bechen
 - Kristin Enright
@@ -146,19 +166,21 @@ Transcripts currently included:
 - Dr. Samantha Dunn
 
 Transcript note:
+
 - Transcripts are auto-generated and lightly cleaned for readability. They are included as accessibility support and class documentation, not as official verbatim records.
 
 ## Content and bibliography notes
 
 The toolkit is written as a student-facing educational resource, not as an official university-wide AI policy document. Students should still follow individual course syllabi, instructor expectations, and university guidance.
 
-The bibliography is organized by topic area so that the site content can be connected back to supporting research and source material. Before a final public presentation, the class should perform one final link-click review of bibliography entries and any instructor-requested citation formatting.
+The bibliography is organized by topic area so that the site content can be connected back to supporting research and source material. Before final presentation, the group should perform one final live-click review of bibliography entries and any instructor-requested citation formatting.
 
 ## Quiz and badge notes
 
 The quiz is a learning check built into the static website. Questions are randomized, and passing the quiz unlocks the downloadable badge.
 
 Important limitation:
+
 - The quiz and badge are client-side and should be treated as an educational knowledge check, not as a tamper-proof official credential.
 
 ## Maintenance checklist before future pushes
@@ -174,10 +196,10 @@ Before pushing future changes:
 7. Verify bibliography links and topic grouping.
 8. Confirm credits are still accurate.
 9. Confirm `_headers` remains present.
-10. Avoid adding unsafe patterns such as `eval`, `document.write`, inline event handlers, or raw HTML injection.
+10. Avoid adding unsafe patterns such as `eval`, `document.write`, inline event handlers, raw HTML injection, or unnecessary third-party scripts.
 
 ## Recommended Git commit message
 
 ```text
-Finalize SAU AI Ethics Toolkit with docs and security audit
+Finalize source validation and documentation updates
 ```
